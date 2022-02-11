@@ -1,6 +1,6 @@
 public class Personaje{
     private String nombre;
-    private String edad;
+    private int edad;
 
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -9,7 +9,7 @@ public class Personaje{
         return nombre;
     }
     public void saludar(){
-        System.out.println("Hola Alumno de POO" + nombre);
+        System.out.println("Hola Alumno de POO " + nombre);
     }
     
 }
