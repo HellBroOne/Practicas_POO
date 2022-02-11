@@ -5,10 +5,10 @@ public class Personaje{
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public String getNombre(String nombre){
+    public String getNombre(){
         return nombre;
     }
-    saludar(){
+    public void saludar(){
         System.out.println("Hola Alumno de POO" + nombre);
     }
     
