@@ -1,6 +1,6 @@
 public class PruebaPersonaje{
     public static void main(String[] args){
-        Personaje alumno = new Personaje();
+        Personaje alumno = new Personaje("Kal El");
         alumno.setNombre("Kal El");
         alumno.saludar();
         System.out.println("Nombre: " + alumno.getNombre()+" Edad: "+alumno.getEdad());
