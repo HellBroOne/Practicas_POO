@@ -1,5 +1,5 @@
-package src.org.gamex.www.poo1pvsz.pruebas;
-import src.org.gamex.www.poo1pvsz.personajes.Personaje;
+package org.gamex.poo1pvsz.pruebas;
+import org.gamex.poo1pvsz.personajes.Personaje;
 
 //se importa la clase de personaje
 public class PruebaPersonaje{

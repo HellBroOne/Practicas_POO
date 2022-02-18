@@ -1,4 +1,4 @@
-package src.org.gamex.www.poo1pvsz.personajes;
+package org.gamex.poo1pvsz.personajes;
 
 public class Personaje{
     private String nombre;
