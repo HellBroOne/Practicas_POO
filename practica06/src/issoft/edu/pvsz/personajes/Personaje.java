@@ -31,5 +31,8 @@ public class Personaje{
         }
         return false;
     }
+    public void getDetalle(){
+        return nombre+"\t" +edad
+    }
     
 }
