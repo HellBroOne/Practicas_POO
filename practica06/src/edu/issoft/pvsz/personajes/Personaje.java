@@ -9,7 +9,6 @@ public class Personaje{
         int edad = 0;
         
     }
-//Aqui hay Errores para el tamaño
     public void setNombre(String nombre){
         if ((nombre.length() > 3) && (nombre.length() < 20)){
             this.nombre = nombre;

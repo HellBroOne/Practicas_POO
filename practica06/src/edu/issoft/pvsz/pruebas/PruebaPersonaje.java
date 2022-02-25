@@ -10,7 +10,6 @@ public class PruebaPersonaje{
         per01.setEdad(200);
         per01.saludar();
         System.out.println("Nombre: " + per01.getNombre()+" Edad: "+per01.getEdad());
-        per01.getDetalle();
 
         //per02
         Personaje per02 = new Personaje("Rosario");
@@ -18,7 +17,6 @@ public class PruebaPersonaje{
         per02.setEdad(10);
         per02.saludar();
         System.out.println("Nombre: " + per02.getNombre()+" Edad: "+per02.getEdad());
-        per02.getDetalle();
 
         //per03
         Personaje per03 = new Personaje("Emiliano");
@@ -26,7 +24,6 @@ public class PruebaPersonaje{
         per03.setEdad(1);
         per03.saludar();
         System.out.println("Nombre: " + per03.getNombre()+" Edad: "+per03.getEdad());
-        per03.getDetalle();
 
         //per04
         Personaje per04 = new Personaje("Areli");
@@ -34,7 +31,6 @@ public class PruebaPersonaje{
         per04.setEdad(-10);
         per04.saludar();
         System.out.println("Nombre: " + per04.getNombre()+" Edad: "+per04.getEdad());
-        per04.getDetalle();
 
         //per05
         Personaje per05 = new Personaje("Eloy");
@@ -42,7 +38,6 @@ public class PruebaPersonaje{
         per05.setEdad(500);
         per05.saludar();
         System.out.println("Nombre: " + per05.getNombre()+" Edad: "+per05.getEdad());
-        per05.getDetalle();
 
         //otros personajes
         Personaje per06 = per05;
@@ -62,13 +57,15 @@ public class PruebaPersonaje{
 
         System.out.println(" - - - ");
 
-        per01.getDetalle();
-        per02.getDetalle();
-        per03.getDetalle();
-        per04.getDetalle();
-        per05.getDetalle();
-    
+        System.out.println(per01.getDetalle());
+        System.out.println(per02.getDetalle());
+        System.out.println(per03.getDetalle());
+        System.out.println(per04.getDetalle());
+        System.out.println(per05.getDetalle());
+       
 
+        System.out.println(" - - - ");
+    
         Personaje alumno = new Personaje("Kal El");
         alumno.setNombre("Kal El");
         System.out.println("Modificando el nombre " + alumno.getNombre());
@@ -85,5 +82,6 @@ public class PruebaPersonaje{
             System.out.println("Edad sin cambio.");
         }
         System.out.println("Nombre: " + alumno.getNombre()+" Edad: "+alumno.getEdad());
+    
 }
-}
+} 
