@@ -49,12 +49,24 @@ public class PruebaPersonaje{
         per06.setNombre("Aratt Esau Juarez Luna");
 
         Personaje per07 = per04;
+        per07.setEdad(999);
+
         Personaje per08 = per03;
         per08.setNombre("Hanna");
 
         Personaje per09 = per02;
+        per09.setEdad(666);
+
         Personaje per10 = per01;
         per06.setNombre("Maria Aide");
+
+        System.out.println(" - - - ")
+
+        per01.getDetalle();
+        per02.getDetalle();
+        per03.getDetalle();
+        per04.getDetalle();
+        per05.getDetalle();
     
         //System.out.println("Modificando el nombre " + alumno.getNombre());
         //alumno.setNombre("Michael Jordan");
