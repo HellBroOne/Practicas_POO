@@ -1,5 +1,5 @@
-package org.gamex.poo1pvsz.pruebas;
-import org.gamex.poo1pvsz.personajes.*;
+package issoft.edu.pvsz.pruebas;
+import issoft.edu.pvsz.personajes.*;
 
 //se importa la clase de personaje
 public class PruebaPersonaje{

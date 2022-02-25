@@ -1,4 +1,4 @@
-package org.gamex.poo1pvsz.personajes;
+package issoft.edu.pvsz.personajes;
 
 public class Personaje{
     private String nombre;
@@ -7,10 +7,13 @@ public class Personaje{
     public Personaje(String nombre){
         this.nombre = nombre;
         int edad = 0;
+        
     }
 
     public void setNombre(String nombre){
+        if (String nombre > 3) && (String nombre < 20){
         this.nombre = nombre;
+        }
     }
     public String getNombre(){
         return nombre;
