@@ -1,5 +1,5 @@
-package issoft.edu.pvsz.pruebas;
-import issoft.edu.pvsz.personajes.*;
+package edu.issoft.pvsz.pruebas;
+import edu.issoft.pvsz.personajes.*;
 
 //se importa la clase de personaje
 public class PruebaPersonaje{
@@ -60,7 +60,7 @@ public class PruebaPersonaje{
         Personaje per10 = per01;
         per06.setNombre("Maria Aide");
 
-        System.out.println(" - - - ")
+        System.out.println(" - - - ");
 
         per01.getDetalle();
         per02.getDetalle();
@@ -68,8 +68,11 @@ public class PruebaPersonaje{
         per04.getDetalle();
         per05.getDetalle();
     
-        //System.out.println("Modificando el nombre " + alumno.getNombre());
-        //alumno.setNombre("Michael Jordan");
+
+        Personaje alumno = new Personaje("Kal El");
+        alumno.setNombre("Kal El");
+        System.out.println("Modificando el nombre " + alumno.getNombre());
+        alumno.setNombre("Michael Jordan");
 
         //Esta wea ya es pra la edad
         alumno.saludar();

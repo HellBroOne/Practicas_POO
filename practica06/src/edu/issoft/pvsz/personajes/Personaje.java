@@ -1,4 +1,4 @@
-package issoft.edu.pvsz.personajes;
+package edu.issoft.pvsz.personajes;
 
 public class Personaje{
     private String nombre;
@@ -9,10 +9,10 @@ public class Personaje{
         int edad = 0;
         
     }
-
+//Aqui hay Errores para el tamaño
     public void setNombre(String nombre){
-        if (String nombre > 3) && (String nombre < 20){
-        this.nombre = nombre;
+        if ((nombre.length() > 3) && (nombre.length() < 20)){
+            this.nombre = nombre;
         }
     }
     public String getNombre(){
@@ -25,14 +25,14 @@ public class Personaje{
         return edad;
     }
     public boolean setEdad(int edad){
-        if ((edad > 0) && (edad < 120)){
+        if ((edad > 0) && (edad < 120)) {
             this.edad = edad;
             return true;
         }
         return false;
     }
-    public void getDetalle(){
-        return nombre+"\t" +edad;
+    public String getDetalle(){
+        return nombre+"\t"+edad;
     }
     
 }
