@@ -14,8 +14,10 @@ public class PruebaPersonaje{
         int m = 0;
 
         for (i = 0; i < m; i++){
-            m = (int)(Math.random)
+            m = (int)(Math.random()*10+1);
+            System.out.println(m);
         }
+        
 
         
         //System.out.println("Nombre: " + per04.getNombre()+" Edad: "+per04.getEdad());
