@@ -1,5 +1,6 @@
 package edu.issoft.pvsz.pruebas;
 import edu.issoft.pvsz.personajes.*;
+
 import java.util.*;
 
 //se importa la clase de personaje
@@ -18,44 +19,40 @@ public class PruebaPersonaje{
         while (n >= m){
             n = rnd.nextInt(100);
             m = rnd.nextInt(100);
-    
-        for (int i = n; n < m; i++){
-            int ed = rnd.nextInt(250);
-            per01.setEdad(ed);
-            if (setEdad() == true){
-                System.out.println("Christopher"+edad+" se modificó la edad.");
-            }
-            System.out.println("Christopher 0 sin modificación de edad a "+edad);
-            //Paso 5
-            int ed = rnd.nextInt(250);
-            per02.setEdad(ed);
-            if (setEdad() == true){
-                System.out.println("Aide"+edad+" se modificó la edad.");
-            }
-            System.out.println("Aide 0 sin modificación de edad a "+edad);
-            //2
-            int ed = rnd.nextInt(250);
-            per01.setEdad(ed);
-            if (setEdad() == true){
-                System.out.println("Rosario"+edad+" se modificó la edad.");
-            }
-            System.out.println("Rosario 0 sin modificación de edad a "+edad);
-
-            //paso 6
-            while (!per04.setEdad(ed)){
+            for (int i = n; n < m; i++){
+                int ed = rnd.nextInt(250);
+                per01.setEdad(ed);
+                if (setEdad() == true){
+                    System.out.println("Christopher"+edad+" se modifico la edad.");
+                    }
+                    System.out.println("Christopher 0 sin modificacion de edad a "+edad);
+                    //Paso 5
+                int ed = rnd.nextInt(250);
+                per02.setEdad(ed);
+                if (setEdad() == true){
+                    System.out.println("Aide"+edad+" se modifico la edad.");
+                    }
+                    System.out.println("Aide 0 sin modificación de edad a "+edad);
+                //2
+                int ed = rnd.nextInt(250);
+                per03.setEdad(ed);
+                if (setEdad() == true){
+                    System.out.println("Rosario"+edad+" se modifico la edad.");
+                    }
+                    System.out.println("Rosario 0 sin modificacion de edad a "+edad);
+                //paso 6
                 do {
                     int ed = rnd.nextInt(250);
                     System.out.println(ed);
                     if (ed == 150){
                         System.out.println("***BINGO "+ed+"***");
-                        }
                     }
-                break outFor;
-            }
-            
-         }
-         per04.getDetalle();
+            }while (!per04.setEdad());
         }
+            
+         
+         per04.getDetalle();
+    }
 
 
 /*
