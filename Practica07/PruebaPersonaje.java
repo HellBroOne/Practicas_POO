@@ -4,42 +4,30 @@ import edu.issoft.pvsz.personajes.*;
 //se importa la clase de personaje
 public class PruebaPersonaje{
     public static void main(String[] args){
-        //per01
-        Personaje per01 = new Personaje("Alexander");
-        per01.setNombre("Alexander");
-        per01.setEdad(200);
-        per01.saludar();
-        System.out.println("Nombre: " + per01.getNombre()+" Edad: "+per01.getEdad());
+        //personajes
+        Personaje per01 = new Personaje("Christopher");
+        Personaje per02 = new Personaje("Aide");
+        Personaje per03 = new Personaje("Rosario");
+        Personaje per04 = new Personaje("Antonio");
 
-        //per02
-        Personaje per02 = new Personaje("Rosario");
-        per02.setNombre("Rosario");
-        per02.setEdad(10);
-        per02.saludar();
-        System.out.println("Nombre: " + per02.getNombre()+" Edad: "+per02.getEdad());
+        int n = 0;
+        int m = 0;
 
-        //per03
-        Personaje per03 = new Personaje("Emiliano");
-        per03.setNombre("Emiliano");
-        per03.setEdad(1);
-        per03.saludar();
-        System.out.println("Nombre: " + per03.getNombre()+" Edad: "+per03.getEdad());
+        for (i = 0; i < m; i++){
+            m = (int)(Math.random)
+        }
 
-        //per04
-        Personaje per04 = new Personaje("Areli");
-        per04.setNombre("Areli");
-        per04.setEdad(-10);
-        per04.saludar();
-        System.out.println("Nombre: " + per04.getNombre()+" Edad: "+per04.getEdad());
+        
+        //System.out.println("Nombre: " + per04.getNombre()+" Edad: "+per04.getEdad());
 
-        //per05
+        /*
         Personaje per05 = new Personaje("Eloy");
         per05.setNombre("Eloy");
         per05.setEdad(500);
         per05.saludar();
         System.out.println("Nombre: " + per05.getNombre()+" Edad: "+per05.getEdad());
 
-        //otros personajes
+        
         Personaje per06 = per05;
         per06.setNombre("Aratt Esau Juarez Luna");
 
@@ -70,6 +58,7 @@ public class PruebaPersonaje{
         alumno.setNombre("Kal El");
         System.out.println("Modificando el nombre " + alumno.getNombre());
         alumno.setNombre("Michael Jordan");
+        */
 
         //Esta wea ya es pra la edad
         alumno.saludar();
