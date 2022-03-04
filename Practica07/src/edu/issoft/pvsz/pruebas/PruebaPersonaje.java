@@ -13,7 +13,7 @@ public class PruebaPersonaje{
         int n = 0;
         int m = 0;
 
-        for (i = 0; i < m; i++){
+        for (int i = 0; i < m; i++){
             m = (int)(Math.random()*10+1);
             System.out.println(m);
         }
@@ -60,7 +60,7 @@ public class PruebaPersonaje{
         alumno.setNombre("Kal El");
         System.out.println("Modificando el nombre " + alumno.getNombre());
         alumno.setNombre("Michael Jordan");
-        */
+        
 
         //Esta wea ya es pra la edad
         alumno.saludar();
@@ -73,6 +73,7 @@ public class PruebaPersonaje{
             System.out.println("Edad sin cambio.");
         }
         System.out.println("Nombre: " + alumno.getNombre()+" Edad: "+alumno.getEdad());
+        */
     
 }
 } 
