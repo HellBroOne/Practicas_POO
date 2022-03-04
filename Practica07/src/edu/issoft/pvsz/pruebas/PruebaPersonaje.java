@@ -1,5 +1,6 @@
 package edu.issoft.pvsz.pruebas;
 import edu.issoft.pvsz.personajes.*;
+import java.util.Random;
 
 //se importa la clase de personaje
 public class PruebaPersonaje{
@@ -10,11 +11,12 @@ public class PruebaPersonaje{
         Personaje per03 = new Personaje("Rosario");
         Personaje per04 = new Personaje("Antonio");
 
-        int n = 0;
+        //int n = 0;
         int m = 0;
 
-        for (int i = 0; i < m; i++){
-            m = (int)(Math.random()*10+1);
+
+        for (int i = 0; i < 2; i++){
+            m = (int) (Math.random()*10);
             System.out.println(m);
         }
         
