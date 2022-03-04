@@ -23,8 +23,10 @@ public class PruebaPersonaje{
         }
     
     
-        for (; n < m; n++){
+        for (int i = n; n < m; i++){
             per01.setEdad(ed);
+            per02.setEdad(ed);
+            per03.setEdad(ed);
             if (setEdad()){
                 System.out.println("Christopher"+edad+" se modificó la edad.");
             }
