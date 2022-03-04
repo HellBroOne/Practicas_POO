@@ -18,8 +18,6 @@ public class PruebaPersonaje{
         while (n >= m){
             n = rnd.nextInt(100);
             m = rnd.nextInt(100);
-
-        }
     
         for (int i = n; n < m; i++){
             int ed = rnd.nextInt(250);
@@ -47,17 +45,16 @@ public class PruebaPersonaje{
             while (!per04.setEdad(ed)){
                 do {
                     int ed = rnd.nextInt(250);
-                ystem.out.println(ed);
-                if (ed == 150){
-                    System.out.println("***BINGO "+ed+"***");
-                }
-                OutFor
-            }
-               
-            
-                continue;
+                    System.out.println(ed);
+                    if (ed == 150){
+                        System.out.println("***BINGO "+ed+"***");
+                        }
+                    }
+                break outFor;
             }
             
+         }
+         per04.getDetalle();
         }
 
 
