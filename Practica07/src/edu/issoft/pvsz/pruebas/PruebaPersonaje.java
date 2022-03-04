@@ -14,7 +14,6 @@ public class PruebaPersonaje{
         int n = 0;
         int m = 0;
         Random rnd = new Random();
-        int ed = rnd.nextInt(250);
 
         while (n >= m){
             n = rnd.nextInt(100);
@@ -22,48 +21,47 @@ public class PruebaPersonaje{
 
         }
     
-    
         for (int i = n; n < m; i++){
+            int ed = rnd.nextInt(250);
             per01.setEdad(ed);
-            per02.setEdad(ed);
-            per03.setEdad(ed);
-            if (setEdad()){
+            if (setEdad() == true){
                 System.out.println("Christopher"+edad+" se modificó la edad.");
             }
             System.out.println("Christopher 0 sin modificación de edad a "+edad);
-
-            do {
-                int ed = rnd.nextInt(250);
-                System.out.println(ed);
-                if (ed == 150){
-                    System.out.println("***BINGO "+ed+"***");
-                    
-                }
-            }
-            
-        }
-/*
-        for (n; n<m; n++1){
-            ed = nextInt(int 250);
-            per02.setEdad((int) ed);
-            if (setEdad){
+            //Paso 5
+            int ed = rnd.nextInt(250);
+            per02.setEdad(ed);
+            if (setEdad() == true){
                 System.out.println("Aide"+edad+" se modificó la edad.");
             }
             System.out.println("Aide 0 sin modificación de edad a "+edad);
-        }
-
-        for (n; n<m; n++1){
-            ed = nextInt(int 250);
-            per02.setEdad((int) ed);
-            if (setEdad){
+            //2
+            int ed = rnd.nextInt(250);
+            per01.setEdad(ed);
+            if (setEdad() == true){
                 System.out.println("Rosario"+edad+" se modificó la edad.");
             }
             System.out.println("Rosario 0 sin modificación de edad a "+edad);
+
+            //paso 6
+            while (!per04.setEdad(ed)){
+                do {
+                    int ed = rnd.nextInt(250);
+                ystem.out.println(ed);
+                if (ed == 150){
+                    System.out.println("***BINGO "+ed+"***");
+                }
+                OutFor
+            }
+               
+            
+                continue;
+            }
+            
         }
-        */
-        
 
 
+/*
         
         //System.out.println("Nombre: " + per04.getNombre()+" Edad: "+per04.getEdad());
 
