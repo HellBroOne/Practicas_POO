@@ -6,7 +6,7 @@ public class Personaje{
 
     public Personaje(String nombre){
         this.nombre = nombre;
-        //int edad = 0;
+        int edad = 0;
         
     }
     public void setNombre(String nombre){
