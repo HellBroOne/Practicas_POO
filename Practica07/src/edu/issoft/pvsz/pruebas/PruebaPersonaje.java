@@ -13,7 +13,8 @@ public class PruebaPersonaje{
 
         double n = 0.0;
         double m = 0.0;
-        int ed = 0;
+        Random rnd = new Random;
+        int ed = rnd.nextInt(int 250)
 
         for (int i = 0; i < 1; i++){
             m = (double) (Math.random()*100);
@@ -26,15 +27,14 @@ public class PruebaPersonaje{
             System.out.println(n);
         }
     
-        for (n; n<m; n++1){
-            ed = nextInt(int 250);
+        for (; n < m; n++1){
             per01.setEdad((int) ed);
             if (setEdad){
                 System.out.println("Christopher"+edad+" se modificó la edad.");
             }
             System.out.println("Christopher 0 sin modificación de edad a "+edad);
         }
-
+/*
         for (n; n<m; n++1){
             ed = nextInt(int 250);
             per02.setEdad((int) ed);
@@ -52,6 +52,7 @@ public class PruebaPersonaje{
             }
             System.out.println("Rosario 0 sin modificación de edad a "+edad);
         }
+        */
         
 
 
