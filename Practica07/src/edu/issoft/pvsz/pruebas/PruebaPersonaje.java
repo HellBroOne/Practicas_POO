@@ -11,21 +11,17 @@ public class PruebaPersonaje{
         Personaje per03 = new Personaje("Rosario");
         Personaje per04 = new Personaje("Antonio");
 
-        double n = 0.0;
-        double m = 0.0;
+        int n = 0;
+        int m = 0;
         Random rnd = new Random();
         int ed = rnd.nextInt(250);
 
-        for (int i = 0; i < 1; i++){
-            m = (double) (Math.random()*100);
-            m = (int) m;
-            System.out.println(m);
+        while (n >= m){
+            n = rnd.nextInt(100);
+            m = rnd.nextInt(100);
+
         }
-        for (int i = 0; i < 1; i++){
-            n = (double) (Math.random()*100);
-            n = (int) n;
-            System.out.println(n);
-        }
+    
     
         for (; n < m; n++){
             per01.setEdad(ed);
@@ -33,6 +29,16 @@ public class PruebaPersonaje{
                 System.out.println("Christopher"+edad+" se modificó la edad.");
             }
             System.out.println("Christopher 0 sin modificación de edad a "+edad);
+
+            do {
+                int ed = rnd.nextInt(250);
+                System.out.println(ed);
+                if (ed == 150){
+                    System.out.println("***BINGO "+ed+"***");
+                    
+                }
+            }
+            
         }
 /*
         for (n; n<m; n++1){
