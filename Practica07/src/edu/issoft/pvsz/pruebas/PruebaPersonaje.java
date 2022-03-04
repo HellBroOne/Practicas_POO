@@ -21,25 +21,28 @@ public class PruebaPersonaje{
             m = rnd.nextInt(100);
             for (int i = n; n < m; i++){
                 int ed = rnd.nextInt(250);
-                per01.setEdad(ed);
-                if (setEdad() == true){
-                    System.out.println("Christopher"+edad+" se modifico la edad.");
+                //per01.setEdad(ed);
+                if (per01.setEdad(ed) == true){
+                    System.out.println("Christopher"+per01.getEdad()+" se modifico la edad.");
                     }
-                    System.out.println("Christopher 0 sin modificacion de edad a "+edad);
+                    System.out.println("Christopher 0 sin modificacion de edad a "+per01.getEdad());
+                int ed = rnd.nextInt(250);
+                break;
                     //Paso 5
-                int ed = rnd.nextInt(250);
-                per02.setEdad(ed);
-                if (setEdad() == true){
-                    System.out.println("Aide"+edad+" se modifico la edad.");
+                //per02.setEdad(ed);
+                if (per02.setEdad(ed) == true){
+                    System.out.println("Aide"+per02.getEdad()+" se modifico la edad.");
                     }
-                    System.out.println("Aide 0 sin modificación de edad a "+edad);
+                    System.out.println("Aide 0 sin modificación de edad a "+per02.getEdad());
+                break;
                 //2
-                int ed = rnd.nextInt(250);
-                per03.setEdad(ed);
-                if (setEdad() == true){
-                    System.out.println("Rosario"+edad+" se modifico la edad.");
+                //per03.setEdad(ed);
+                if (per03.setEdad(ed) == true){
+                    System.out.println("Rosario"+per03.getEdad()+" se modifico la edad.");
                     }
-                    System.out.println("Rosario 0 sin modificacion de edad a "+edad);
+                    System.out.println("Rosario 0 sin modificacion de edad a "+per03.getEdad());
+                int ed = rnd.nextInt(250);
+                break;
                 //paso 6
                 do {
                     int ed = rnd.nextInt(250);
@@ -47,7 +50,7 @@ public class PruebaPersonaje{
                     if (ed == 150){
                         System.out.println("***BINGO "+ed+"***");
                     }
-            }while (!per04.setEdad());
+            }while (!per04.setEdad(ed) == true);
         }
             
          
