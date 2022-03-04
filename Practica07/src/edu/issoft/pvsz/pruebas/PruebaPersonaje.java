@@ -21,31 +21,27 @@ public class PruebaPersonaje{
             m = rnd.nextInt(100);
             for (int i = n; n < m; i++){
                 int ed = rnd.nextInt(250);
-                //per01.setEdad(ed);
                 if (per01.setEdad(ed) == true){
                     System.out.println("Christopher"+per01.getEdad()+" se modifico la edad.");
                     }
                     System.out.println("Christopher 0 sin modificacion de edad a "+per01.getEdad());
-                int ed = rnd.nextInt(250);
-                break;
                     //Paso 5
-                //per02.setEdad(ed);
+                ed = rnd.nextInt(250);
+                per02.setEdad(ed);
                 if (per02.setEdad(ed) == true){
                     System.out.println("Aide"+per02.getEdad()+" se modifico la edad.");
                     }
-                    System.out.println("Aide 0 sin modificación de edad a "+per02.getEdad());
-                break;
+                    System.out.println("Aide 0 sin modificacion de edad a "+per02.getEdad());
                 //2
-                //per03.setEdad(ed);
+                ed = rnd.nextInt(250);
+                per03.setEdad(ed);
                 if (per03.setEdad(ed) == true){
                     System.out.println("Rosario"+per03.getEdad()+" se modifico la edad.");
                     }
                     System.out.println("Rosario 0 sin modificacion de edad a "+per03.getEdad());
-                int ed = rnd.nextInt(250);
-                break;
                 //paso 6
                 do {
-                    int ed = rnd.nextInt(250);
+                    ed = rnd.nextInt(250);
                     System.out.println(ed);
                     if (ed == 150){
                         System.out.println("***BINGO "+ed+"***");
