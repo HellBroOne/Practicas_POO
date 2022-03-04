@@ -22,23 +22,26 @@ public class PruebaPersonaje{
             for (int i = n; n < m; i++){
                 int ed = rnd.nextInt(250);
                 if (per01.setEdad(ed) == true){
-                    System.out.println("Christopher"+per01.getEdad()+" se modifico la edad.");
-                    }
+                    System.out.println("Christopher "+per01.getEdad()+" se modifico la edad.");
+                    } else {
                     System.out.println("Christopher 0 sin modificacion de edad a "+per01.getEdad());
+                    }
                     //Paso 5
                 ed = rnd.nextInt(250);
                 per02.setEdad(ed);
                 if (per02.setEdad(ed) == true){
-                    System.out.println("Aide"+per02.getEdad()+" se modifico la edad.");
-                    }
+                    System.out.println("Aide "+per02.getEdad()+" se modifico la edad.");
+                    } else {
                     System.out.println("Aide 0 sin modificacion de edad a "+per02.getEdad());
+                    }
                 //2
                 ed = rnd.nextInt(250);
                 per03.setEdad(ed);
                 if (per03.setEdad(ed) == true){
-                    System.out.println("Rosario"+per03.getEdad()+" se modifico la edad.");
-                    }
+                    System.out.println("Rosario "+per03.getEdad()+" se modifico la edad.");
+                    } else {
                     System.out.println("Rosario 0 sin modificacion de edad a "+per03.getEdad());
+                    }
                 //paso 6
                 do {
                     ed = rnd.nextInt(250);

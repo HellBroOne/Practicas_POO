@@ -27,8 +27,9 @@ public class Personaje{
         if ((edad > 0) && (edad < 120)) {
             this.edad = edad;
             return true;
-        }
+        } else{
         return false;
+        }
     }
     public String getDetalle(){
         return nombre+"\t"+edad;
