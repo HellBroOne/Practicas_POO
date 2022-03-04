@@ -1,6 +1,6 @@
 package edu.issoft.pvsz.pruebas;
 import edu.issoft.pvsz.personajes.*;
-import java.util.Random;
+import java.util.*;
 
 //se importa la clase de personaje
 public class PruebaPersonaje{
@@ -33,6 +33,24 @@ public class PruebaPersonaje{
                 System.out.println("Christopher"+edad+" se modificó la edad.");
             }
             System.out.println("Christopher 0 sin modificación de edad a "+edad);
+        }
+
+        for (n; n<m; n++1){
+            ed = nextInt(int 250);
+            per02.setEdad((int) ed);
+            if (setEdad){
+                System.out.println("Aide"+edad+" se modificó la edad.");
+            }
+            System.out.println("Aide 0 sin modificación de edad a "+edad);
+        }
+
+        for (n; n<m; n++1){
+            ed = nextInt(int 250);
+            per02.setEdad((int) ed);
+            if (setEdad){
+                System.out.println("Rosario"+edad+" se modificó la edad.");
+            }
+            System.out.println("Rosario 0 sin modificación de edad a "+edad);
         }
         
 
