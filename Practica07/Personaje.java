@@ -2,7 +2,7 @@ package edu.issoft.pvsz.personajes;
 
 public class Personaje{
     private String nombre;
-    //private int edad;
+    private int edad;
 
     public Personaje(String nombre){
         this.nombre = nombre;
