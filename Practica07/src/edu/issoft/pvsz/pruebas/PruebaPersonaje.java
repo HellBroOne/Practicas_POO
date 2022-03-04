@@ -11,13 +11,19 @@ public class PruebaPersonaje{
         Personaje per03 = new Personaje("Rosario");
         Personaje per04 = new Personaje("Antonio");
 
-        //int n = 0;
-        int m = 0;
+        int n = 0;
+        double m = 0.0;
 
 
-        for (int i = 0; i < 2; i++){
-            m = (int) (Math.random()*10);
+        for (int i = 0; i < 1; i++){
+            m = (double) (Math.random()*100);
+            m = (int) m;
             System.out.println(m);
+        }
+        for (int i = 0; i < 1; i++){
+            n = (double) (Math.random()*100);
+            n = (int) n;
+            System.out.println(n);
         }
         
 
