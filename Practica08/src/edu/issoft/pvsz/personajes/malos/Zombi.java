@@ -22,7 +22,10 @@ public class Zombi extends Personaje{
     }
     ///Metodo obtener detalles
     public getDetalle(){
-        super.getDetalle()+;
+        super.getDetalle() + " " + ataque;
+    }
+    public decVida(){
+        
     }
 
 }

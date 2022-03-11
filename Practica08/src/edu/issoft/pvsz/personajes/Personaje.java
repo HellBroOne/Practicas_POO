@@ -1,8 +1,8 @@
 package edu.issoft.pvsz.personajes;
 
 public class Personaje{
-    protected String nombre;
-    protected int vida;
+    private String nombre;
+    private int vida;
 
     public Personaje(String nombre, int vida){
         this.nombre = nombre;
