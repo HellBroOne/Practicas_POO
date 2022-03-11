@@ -2,7 +2,7 @@ package edu.issoft.pvsz.personajes;
 
 public class Personaje{
     private String nombre;
-    private int edad;
+    private int vida;
 
     public Personaje(String nombre){
         this.nombre = nombre;
@@ -19,20 +19,20 @@ public class Personaje{
     public void saludar(){
         System.out.println("Hola Alumno de POO " + nombre);
     }
-    public int getEdad(){
-        return edad;
+    public int getVida(){
+        return vida;
     }
 
-    public boolean setEdad(int edad){
-        this.edad = edad;
-        if ((edad > 0) && (edad < 120)) {
+    public boolean setVida(int vida){
+        if ((vida > 0) && (vida < 100)) {
+            this.vida = vida;
             return true;
         } else{
         return false;
         }
     }
     public String getDetalle(){
-        return nombre+"\t"+edad;
+        return nombre+"\t"+vida;
     }
     
 }
