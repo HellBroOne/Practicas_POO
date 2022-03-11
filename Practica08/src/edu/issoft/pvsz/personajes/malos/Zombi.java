@@ -24,8 +24,26 @@ public class Zombi extends Personaje{
     public getDetalle(){
         super.getDetalle() + " " + ataque;
     }
+    ///Decrementos
+    ///Decrementos sin atributo
     public decVida(){
-        
+        super.decVida();
+        if (ataque == false){
+            vida = vida - 3;
+        }
+    }
+    public decVida(){
+        super.decVida();
+        if (ataque == true){
+            vida = vida - 2;
+        }
+    }
+    ///Decrementos con Atributos
+    public decVida(int dec){
+        super.decVida(dec);
+        if (ataque == true){
+            
+        }
     }
 
 }
