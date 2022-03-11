@@ -1,5 +1,7 @@
 package edu.issoft.pvsz.pruebas;
-import edu.issoft.pvsz.personajes.*;
+import edu.issoft.pvsz.personajes.Personaje;
+import edu.issoft.pvsz.personajes.buenos.Planta;
+import edu.issoft.pvsz.personajes.malos.Zombi;
 
 import java.util.*;
 
@@ -27,12 +29,12 @@ public class PruebaPersonaje{
                 randnum = rnd.nextInt(100);
             }
             if (p instanceof Planta){
-                System.out.println("Soy Planta"+""+getescudo());
+                System.out.println("Soy Planta"+""+p.getescudo());
                 p.addVida(randnum);
 
             }
             if (p instanceof Zombi){
-                System.out.println("Soy Zombi"+""+getAtaque());
+                System.out.println("Soy Zombi"+""+p.getAtaque());
                 p.decVida(randnum);
             }
             System.out.println(randnum);

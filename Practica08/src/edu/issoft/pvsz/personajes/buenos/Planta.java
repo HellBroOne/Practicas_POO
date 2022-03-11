@@ -1,4 +1,5 @@
 package edu.issoft.pvsz.personajes.buenos;
+import edu.issoft.pvsz.personajes.Personaje;
 public class Planta extends Personaje{
     public char escudo;
     

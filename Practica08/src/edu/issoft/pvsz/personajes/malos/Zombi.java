@@ -1,4 +1,6 @@
 package edu.issoft.pvsz.personajes.malos;
+import edu.issoft.pvsz.personajes.Personaje;
+
 public class Zombi extends Personaje{
     public boolean ataque;
 
@@ -27,26 +29,29 @@ public class Zombi extends Personaje{
     ///Decrementos
     ///Decrementos sin atributo
     public void decVida(){
+        super(vida);
         super.decVida();
         if (ataque == false){
             vida = vida - 3;
         }
     }
     public void decVida(){
+        super(vida);
         super.decVida();
         if (ataque == true){
             vida = vida - 2;
         }
     }
     ///Decrementos con Atributos
-    public void decVida(dec){
+    public void decVida(int dec){
+        super(vida);
         super.decVida(dec);
         if (ataque == false){
             vida = vida - (dec*3);
         }
     }
 
-    public void decVida(dec){
+    public void decVida(int dec){
         super.decVida(dec);
         if (ataque == true){
             vida = vida - 2;
@@ -56,6 +61,7 @@ public class Zombi extends Personaje{
     ///INCREMENTOS
     ///Incremento sin Atribs
     public void addVida(){
+        super(vida);
         super.addVida();
         if (ataque == false){
             vida = vida + 0;
@@ -63,22 +69,23 @@ public class Zombi extends Personaje{
 
     }
     public void addVida(){
+        super(vida);
         super.addVida();
         if (ataque == true){
             vida = vida + 0;
         }
     }
     //Incremento con atrib
-    public void addVida(vid){
-        super.addVida(incvida);
+    public void addVida(int vid){
+        super(incvida);
         vid = super(incvida);
         if (ataque == true){
             vida = vida + (incvida *3)
         }
     }
-    public void addVida(vid){
+    public void addVida(int vid){
+        super(incvida);
         super.addVida(incvida);
-        vid = super(incvida);
         if (ataque == false){
             vida = vida + 0;
         }
