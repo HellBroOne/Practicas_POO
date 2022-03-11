@@ -1,8 +1,8 @@
 package edu.issoft.pvsz.personajes;
 
 public class Personaje{
-    private String nombre;
-    private int vida;
+    protected String nombre;
+    protected int vida;
 
     public Personaje(String nombre, int vida){
         this.nombre = nombre;
@@ -44,7 +44,7 @@ public class Personaje{
         vida = vida - 1;
     }
     decVida(int dec){
-        dec = 0;
+        dec = 10;
         vida = vida - dec;
     }
     ///Incrementador de Vida
