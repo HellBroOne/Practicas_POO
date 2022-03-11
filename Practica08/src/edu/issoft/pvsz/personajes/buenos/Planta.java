@@ -1,6 +1,6 @@
 package edu.issoft.pvsz.personajes.buenos;
 public class Planta extends Personaje{
-    private char escudo;
+    public char escudo;
 
     public Planta(String nombre, int vida, char escudo){
         this.nombre = nombre;
@@ -24,12 +24,32 @@ public class Planta extends Personaje{
     }
 
     public char getEscudo(){
-        return 'A' || 'B' !! 'C';
-    }
-    super.getDetalle(){
-
+        return 'A' || 'B' || 'C';
     }
 
+    public String getDetalle(){
+        return super.getDetalle() + " " + escudo;
+    }
+    ///Decrementos
+    public decVida(){
+        super.decVida();
+        if (escudo == 'A'){
+            vida = vida - 2;
+        } 
+    }
+    public decVida(int dec){
+        super.decVida();
+        if (escudo == 'A'){
+            vida = vida - (dec*2);
+        }
+    }
+    ///Incrementos
+    public addVida(){
+        super.addVida();
+        if (escudo == 'A'){
+            vida = vida + 2;
+        }
+    }
 
 
 
