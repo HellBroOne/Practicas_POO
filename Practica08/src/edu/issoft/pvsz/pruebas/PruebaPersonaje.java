@@ -6,57 +6,42 @@ import java.util.*;
 //se importa la clase de personaje
 public class PruebaPersonaje{
     public static void main(String[] args){
+        int contador = 0;
+        Random rnd = new Random();
         //personajes
         Personaje per01 = new Personaje("Adrian", 100);
         Personaje per02 = new Personaje("Diego");
         Planta plan01 = new Planta("Angel", 10, 'B');
         Planta plan02 = new Planta("Maria", 50);
-        Planta plan03 = new Planta("Maria", 50);
-        Planta plan04 = new Planta();
-        Planta plan05 = new Planta();
+        Planta plan03 = new Planta("Mario", 'C');
+        Planta plan04 = new Planta("Silvia");
+        Zombi zom01 = new Zombi("Armando", 80, false);
+        Zombi zom02 = new Zombi("Areli", true);
+        Zombi zom03 = new Zombi("Gerardo");
+        Personaje [] personajes = {per01, per02, per03, per04, per05, per06, per07, per08, per09};
+        for (Personaje p : personajes){
+            contador = contador + 1;
+            System.out.println(p.getDetalle());
+            int randnum = rnd.nextInt(100);
+            if (randnum == 0){
+                randnum = rnd.nextInt(100);
+            }
+            if (p instanceof Planta){
+                System.out.println("Soy Planta"+""+getescudo());
+                p.addVida(randnum);
 
-        int n = 0;
-        int m = 0;
-        Random rnd = new Random();
+            }
+            if (p instanceof Zombi){
+                System.out.println("Soy Zombi"+""+getAtaque());
+                p.decVida(randnum);
+            }
+            System.out.println(randnum);
+            System.out.println("***Objeto "+ contador+"***");
 
-        while (n >= m){
-            n = rnd.nextInt(100);
-            m = rnd.nextInt(100);
-            for (int i = n; n < m; i++){
-                int ed = rnd.nextInt(250);
-                if (per01.setEdad(ed) == true){
-                    System.out.println("Christopher "+per01.getEdad()+" se modifico la edad.");
-                    } else {
-                    System.out.println("Christopher 0 sin modificacion de edad a "+per01.getEdad());
-                    }
-                    //Paso 5
-                ed = rnd.nextInt(250);
-                per02.setEdad(ed);
-                if (per02.setEdad(ed) == true){
-                    System.out.println("Aide "+per02.getEdad()+" se modifico la edad.");
-                    } else {
-                    System.out.println("Aide 0 sin modificacion de edad a "+per02.getEdad());
-                    }
-                //2
-                ed = rnd.nextInt(250);
-                per03.setEdad(ed);
-                if (per03.setEdad(ed) == true){
-                    System.out.println("Rosario "+per03.getEdad()+" se modifico la edad.");
-                    } else {
-                    System.out.println("Rosario 0 sin modificacion de edad a "+per03.getEdad());
-                    }
-                //paso 6
-                do {
-                    ed = rnd.nextInt(250);
-                    System.out.println(ed);
-                    if (ed == 150){
-                        System.out.println("***BINGO "+ed+"***");
-                    }
-            }while (!per04.setEdad(ed) == true);
         }
-            
-         
-         per04.getDetalle();
+    
+
+       
     }
 
 
@@ -118,4 +103,3 @@ public class PruebaPersonaje{
         */
     
 }
-} 
