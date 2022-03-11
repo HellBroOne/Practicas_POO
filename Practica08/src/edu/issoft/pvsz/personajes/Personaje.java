@@ -43,16 +43,14 @@ public class Personaje{
     decVida(){
         vida = vida - 1;
     }
-    decVida(int dec){
-        dec = 10;
+    decVida(dec){
         vida = vida - dec;
     }
     ///Incrementador de Vida
     addVida(){
         vida = vida + 1;
     }
-    addVida(int incvida){
-        incvida = 0;
+    addVida(incvida){
         vida = vida + incvida;
     }
     

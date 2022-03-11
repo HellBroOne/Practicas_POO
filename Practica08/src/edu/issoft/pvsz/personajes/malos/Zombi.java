@@ -39,11 +39,50 @@ public class Zombi extends Personaje{
         }
     }
     ///Decrementos con Atributos
-    public decVida(int dec){
+    public decVida(dec){
+        super.decVida(dec);
+        if (ataque == false){
+            vida = vida - (dec*3);
+        }
+    }
+
+    public decVida(dec){
         super.decVida(dec);
         if (ataque == true){
-            
+            vida = vida - 2;
         }
+    }
+
+    ///INCREMENTOS
+    ///Incremento sin Atribs
+    public addVida(){
+        super.addVida();
+        if (ataque == false){
+            vida = vida + 0;
+        }
+
+    }
+    public addVida(){
+        super.addVida();
+        if (ataque == true){
+            vida = vida + 0;
+        }
+    }
+    //Incremento con atrib
+    public addVida(vid){
+        super.addVida(incvida);
+        vid = super(incvida);
+        if (ataque == true){
+            vida = vida + (incvida *3)
+        }
+    }
+    public addVida(vid){
+        super.addVida(incvida);
+        vid = super(incvida);
+        if (ataque == false){
+            vida = vida + 0;
+        }
+
     }
 
 }
