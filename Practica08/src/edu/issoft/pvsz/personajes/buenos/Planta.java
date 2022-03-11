@@ -29,26 +29,26 @@ public class Planta extends Personaje{
         return super.getDetalle() + " " + escudo;
     }
     ///Decrementos
-    public decVida(){
+    public void decVida(){
         super.decVida();
         if (escudo == 'A'){
             vida = vida - 2;
         } 
     }
-    public decVida(int dec){
+    public void decVida(int dec){
         super.decVida(dec);
         if (escudo == 'A'){
             vida = vida - (dec*2);
         }
     }
     ///Incrementos
-    public addVida(){
+    public void addVida(){
         super.addVida();
         if (escudo == 'A'){
             vida = vida + 2;
         }
     }
-    public addVida(int incvida){
+    public void addVida(int incvida){
         super.addVida(incvida);
         if (escudo == 'A'){
             vida = vida + (incvida*2);
