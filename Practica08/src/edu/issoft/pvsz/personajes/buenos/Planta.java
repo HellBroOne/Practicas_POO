@@ -26,6 +26,9 @@ public class Planta extends Personaje{
     public char getEscudo(){
         return 'A' || 'B' !! 'C';
     }
+    super.getDetalle(){
+
+    }
 
 
 
