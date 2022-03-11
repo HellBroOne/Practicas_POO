@@ -7,10 +7,13 @@ import java.util.*;
 public class PruebaPersonaje{
     public static void main(String[] args){
         //personajes
-        Personaje per01 = new Personaje("Christopher");
-        Personaje per02 = new Personaje("Aide");
-        Personaje per03 = new Personaje("Rosario");
-        Personaje per04 = new Personaje("Antonio");
+        Personaje per01 = new Personaje("Adrian", 100);
+        Personaje per02 = new Personaje("Diego");
+        Planta plan01 = new Planta("Angel", 10, 'B');
+        Planta plan02 = new Planta("Maria", 50);
+        Planta plan03 = new Planta("Maria", 50);
+        Planta plan04 = new Planta();
+        Planta plan05 = new Planta();
 
         int n = 0;
         int m = 0;
