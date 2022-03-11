@@ -24,7 +24,7 @@ public class Zombi extends Personaje{
     }
     ///Metodo obtener detalles
     public void getDetalle(){
-        super.getDetalle() + " " + ataque;
+        return super.getDetalle() + " " + ataque;
     }
     ///Decrementos
     ///Decrementos sin atributo
@@ -34,11 +34,7 @@ public class Zombi extends Personaje{
         if (ataque == false){
             vida = vida - 3;
         }
-    }
-    public void decVida(){
-        super(vida);
-        super.decVida();
-        if (ataque == true){
+        else if (ataque == true){
             vida = vida - 2;
         }
     }
@@ -49,14 +45,12 @@ public class Zombi extends Personaje{
         if (ataque == false){
             vida = vida - (dec*3);
         }
-    }
-
-    public void decVida(int dec){
-        super.decVida(dec);
-        if (ataque == true){
+        else if (ataque == true){
             vida = vida - 2;
         }
     }
+ 
+    
 
     ///INCREMENTOS
     ///Incremento sin Atribs
@@ -66,30 +60,22 @@ public class Zombi extends Personaje{
         if (ataque == false){
             vida = vida + 0;
         }
-
-    }
-    public void addVida(){
-        super(vida);
-        super.addVida();
-        if (ataque == true){
+        else if (ataque == true){
             vida = vida + 0;
         }
+
     }
+
     //Incremento con atrib
     public void addVida(int vid){
         super(incvida);
         vid = super(incvida);
         if (ataque == true){
-            vida = vida + (incvida *3)
+            vida = vida + (incvida *3);
         }
-    }
-    public void addVida(int vid){
-        super(incvida);
-        super.addVida(incvida);
-        if (ataque == false){
+        else if (ataque == false){
             vida = vida + 0;
         }
-
     }
 
 }

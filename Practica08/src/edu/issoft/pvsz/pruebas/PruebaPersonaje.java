@@ -1,5 +1,5 @@
 package edu.issoft.pvsz.pruebas;
-import edu.issoft.pvsz.personajes.Personaje;
+import edu.issoft.pvsz.personajes.*;
 import edu.issoft.pvsz.personajes.buenos.Planta;
 import edu.issoft.pvsz.personajes.malos.Zombi;
 
