@@ -1,6 +1,7 @@
 import src.mx.uaz.ingsoft.appsw.universitarios.Universitario;
 import src.mx.uaz.ingsoft.appsw.universitarios.maestros.Maestro;
 import src.mx.uaz.ingsoft.appsw.universitarios.alumnos.Alumno;
+package src.mx.uaz.ingsoft.appsw.pruebas;
 
 public class PruebaIguales {
 	public static void main(String[] args){
@@ -17,15 +18,18 @@ public class PruebaIguales {
 	    //recorre el arreglo
 	    while (i < personas.length){
 	    	for (Universitario u : personas){
+
 	    		//Comparaciones
-	    		if (Universitario u == Persona p){
+	    		if (Universitario u == Persona p) {
 	    			System.out.println("****"+u.toString()+" es identico a "+p.toString()+", son el mismo Objeto");
 	    		}
-                if (Universitario u equals(Persona p)){
+
+                if (Universitario u.equals(Persona p)){
 	    			System.out.println("****"+u.toString()+" es igual a "+p.toString()+", son diferentes Objetos");
 	    		}
-	    		if ((Universitario u equals(Persona p) = false) && (Universitario u != Persona p)){
-	    			system.out.println(u.toString()+"! ="+p.toString());
+
+	    		if ((Universitario u.equals(Persona p) == false) && (Universitario u != Persona p)){
+	    			System.out.println(u.toString()+"!="+p.toString());
 	    		}
 	    	}
 	    }
