@@ -1,4 +1,5 @@
 package src.mx.uaz.ingsoft.appsw.universitarios;
+
 public class Universitario{
 	protected String nombre;
 

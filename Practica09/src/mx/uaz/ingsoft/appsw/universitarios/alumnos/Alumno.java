@@ -1,4 +1,5 @@
 package src.mx.uaz.ingsoft.appsw.universitarios.alumnos;
+
 public class Alumno extends Universitario{
 	public int calificacion;
 	//Constructores

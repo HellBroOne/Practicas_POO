@@ -16,17 +16,16 @@ public class PruebaIguales {
 	    };
 
 	    //recorre el arreglo
-	    int i = 0;
 	    while (i < personas.length) {
 	    	for (Universitario u : personas) {
 
 	    		//Comparaciones
 	    		if (Universitario u == Persona p) {
-	    			System.out.println("****"+u.toString()+" es identico a "+p.toString()+", son el mismo Objeto");
+	    			System.out.println("****"+u.toString()+" es identico a "+p.toString()+", son el mismo Objeto****");
 	    		}
 
                 if (Universitario u.equals(Persona p)){
-	    			System.out.println("****"+u.toString()+" es igual a "+p.toString()+", son diferentes Objetos");
+	    			System.out.println("**"+u.toString()+" es igual a "+p.toString()+", son diferentes Objetos**");
 	    		}
 
 	    		if ((Universitario u.equals(Persona p) == false) && (Universitario u != Persona p)){
