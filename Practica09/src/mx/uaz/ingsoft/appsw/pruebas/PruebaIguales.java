@@ -1,7 +1,7 @@
+package mx.uaz.ingsoft.appsw.pruebas;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 import mx.uaz.ingsoft.appsw.universitarios.maestros.Maestro;
 import mx.uaz.ingsoft.appsw.universitarios.alumnos.Alumno;
-package mx.uaz.ingsoft.appsw.pruebas.*;
 
 public class PruebaIguales {
 	public static void main(String[] args){

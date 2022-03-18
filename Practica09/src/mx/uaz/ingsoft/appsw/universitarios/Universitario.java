@@ -1,7 +1,7 @@
 package mx.uaz.ingsoft.appsw.universitarios;
 
 public class Universitario{
-	protected String nombre;
+	public String nombre;
 
 	public Universitario(String nombre){
 		this.nombre = nombre;
@@ -10,8 +10,8 @@ public class Universitario{
 	public boolean equals(Object u){
 		boolean resultado = false;
 		if ((u != null) && (u instanceof Universitario)){
-			Universitario m = (Universitario) u;
-			if (nombre == m.nombre){
+			Universitario b = (Universitario) u;
+			if (nombre == b.nombre){
 				resultado = true;
 			}
 		}
@@ -22,7 +22,7 @@ public class Universitario{
 		return nombre.hashCode()*15;
 	}
 	public String toString(){
-		return name;
+		return nombre;
 	}
 
 }

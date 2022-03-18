@@ -1,8 +1,8 @@
 package mx.uaz.ingsoft.appsw.universitarios.maestros;
+import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 
 public class Maestro extends Universitario{
-	public float sueldo;
-
+	private float sueldo;
 	//Cosntructores
 	public Maestro(String nombre, float sueldo){
 		super(nombre);
@@ -13,29 +13,28 @@ public class Maestro extends Universitario{
 	}
 
 	//Verificación de sueldo
-	if ((sueldo < 100.00f) && (sueldo > 20000.00f)){
+	if ((sueldo < 100f) && (sueldo > 20000f)) {
 		this.sueldo = sueldo;
 	} else {
-		this.sueldo = 1000.00f;
+		this.sueldo = 1000f;
 	}
 
 	public boolean equals(Object u){
 		boolean resultado = false;
 		if ((u != null) && (u instanceof Maestro)){
-			Universitario a = (Maestro) u;
+			Maestro m = (Maestro) u;
 			//Uso de ambos atributos determin.
-			if ((sueldo == a.sueldo) && (nombre == a.nombre)){
+			if ((sueldo == m.sueldo) && (nombre == m.nombre)){
 				resultado = true;
 			}
 		}
 		return resultado;
 	}
-
 	public int hashCode(){
 		return nombre.hashCode()*((int) sueldo);
 	}
 
-	public String toString(float sueldo){
-		return nombre + (String) sueldo;
+	public String toString(){
+		return nombre + sueldo;
 	}
 }
