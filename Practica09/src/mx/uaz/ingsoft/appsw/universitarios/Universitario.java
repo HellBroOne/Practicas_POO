@@ -16,6 +16,9 @@ public class Universitario{
 		return resultado;
 	}
 
+	public int hashCode(){
+		return nombre.hashCode()*15;
+	}
 	public String toString(){
 		return name;
 	}

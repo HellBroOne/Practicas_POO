@@ -1,12 +1,6 @@
 package src.mx.uaz.ingsoft.appsw.universitarios.maestros;
 public class Maestro extends Universitario{
 	public float sueldo;
-	//Verificación de sueldo
-	if ((sueldo < 100) && (sueldo > 20000)){
-		this.sueldo = sueldo;
-	} else {
-		this.sueldo = 1000.00f;
-	}
 
 	//Cosntructores
 	public Maestro(String nombre, float sueldo){
@@ -15,6 +9,13 @@ public class Maestro extends Universitario{
 	public Maestro(String nombre){
 		super(nombre);
 		sueldo = 1000.00f;
+	}
+
+	//Verificación de sueldo
+	if ((sueldo < 100.00f) && (sueldo > 20000.00f)){
+		this.sueldo = sueldo;
+	} else {
+		this.sueldo = 1000.00f;
 	}
 
 	public boolean equals(Universitario b){
@@ -34,7 +35,6 @@ public class Maestro extends Universitario{
 	}
 
 	public String toString(float sueldo){
-		sueldo = (String) sueldo;
-		return ;
+		return nombre + (String) sueldo;
 	}
 }
