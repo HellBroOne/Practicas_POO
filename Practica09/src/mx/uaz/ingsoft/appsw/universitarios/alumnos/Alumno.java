@@ -19,17 +19,17 @@ public class Alumno extends Universitario{
 	}
 
 	public boolean equals(Object u){
-		boolean resultado = false;
+		boolean result = false;
 		if ((u != null)&&(u instanceof Alumno)){
 			Alumno a = (Alumno) u;
-			if ((nombre == a.nombre) && (calificacion = a.calificacion)){
-				resultado = true;
+			if ( (nombre == a.nombre) && (calificacion == a.calificacion) ){
+				result = true;
 			}
 		}
-		return resultado;
+		return result;
 	}
 	public int hashCode(){
-		return nombre * calificacion;
+		return nombre.hashCode() * calificacion;
 	}
 	public String toString(int calificacion){
 		return nombre + calificacion;

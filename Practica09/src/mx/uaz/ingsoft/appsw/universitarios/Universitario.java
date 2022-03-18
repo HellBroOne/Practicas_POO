@@ -8,14 +8,14 @@ public class Universitario{
 	}
 
 	public boolean equals(Object u){
-		boolean resultado = false;
+		boolean result = false;
 		if ((u != null) && (u instanceof Universitario)){
 			Universitario b = (Universitario) u;
 			if (nombre == b.nombre){
-				resultado = true;
+				result = true;
 			}
 		}
-		return resultado;
+		return result;
 	}
 
 	public int hashCode(){

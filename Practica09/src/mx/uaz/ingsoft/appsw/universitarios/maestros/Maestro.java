@@ -20,15 +20,15 @@ public class Maestro extends Universitario{
 	}
 
 	public boolean equals(Object u){
-		boolean resultado = false;
+		boolean result = false;
 		if ((u != null) && (u instanceof Maestro)){
 			Maestro m = (Maestro) u;
 			//Uso de ambos atributos determin.
 			if ((sueldo == m.sueldo) && (nombre == m.nombre)){
-				resultado = true;
+				result = true;
 			}
 		}
-		return resultado;
+		return result;
 	}
 	public int hashCode(){
 		return nombre.hashCode()*((int) sueldo);
