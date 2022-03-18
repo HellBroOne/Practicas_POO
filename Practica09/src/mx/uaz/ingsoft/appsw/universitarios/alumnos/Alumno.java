@@ -13,7 +13,7 @@ public class Alumno extends Universitario{
 	}
 
 	public int verificarCalif(int calificacion){
-		if ( (calificacion > 0) && (calificacion < 10)) {
+		if ( (calificacion < 0) && (calificacion > 10)) {
 			this.calificacion = calificacion;
 		}
 		else {
@@ -36,7 +36,7 @@ public class Alumno extends Universitario{
 	public int hashCode(){
 		return nombre.hashCode() * calificacion;
 	}
-	public String toString(int calificacion){
+	public String toString(){
 		return nombre + verificarCalif(calificacion);
 	}
 
