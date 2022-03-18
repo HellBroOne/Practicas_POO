@@ -1,4 +1,4 @@
-package src.mx.uaz.ingsoft.appsw.universitarios.maestros;
+package mx.uaz.ingsoft.appsw.universitarios.maestros;
 
 public class Maestro extends Universitario{
 	public float sueldo;
