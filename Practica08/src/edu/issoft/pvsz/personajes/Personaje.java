@@ -1,8 +1,8 @@
 package edu.issoft.pvsz.personajes;
 
 public class Personaje{
-    protected String nombre;
-    protected int vida;
+    private String nombre;
+    private int vida;
 
     public Personaje(String nombre, int vida){
         this.nombre = nombre;
@@ -21,9 +21,7 @@ public class Personaje{
     public String getNombre(){
         return nombre;
     }
-    public void saludar(){
-        System.out.println("Hola Alumno de POO " + nombre);
-    }
+   
     public int getVida(){
         return vida;
     }
@@ -40,18 +38,29 @@ public class Personaje{
         return nombre+"\t"+vida;
     }
     ///Decrementador de Vida
-    public int decVida(){
-        vida = vida - 1;
+    public void decVida(){
+        if ((vida-1 > 0) && (vida-1 < 100)){
+            vida = vida - 1;
+        }
     }
-    public int decVida(int dec){
-        vida = vida - dec;
+
+    public void decVida(int dec){
+        if ((vida-dec > 0) && (vida-dec < 100)){
+            vida = vida - dec;
+        }
     }
+
     ///Incrementador de Vida
-    public int addVida(){
-        vida = vida + 1;
+    public void addVida(){
+        if ((vida+1 > 0) && (vida+1 < 100)){
+            vida = vida + 1;
+        }
     }
-    public int addVida(int incvida){
-        vida = vida + incvida;
+    
+    public void addVida(int incvida){
+        if ((vida+incvida > 0) && (vida+incvida < 100)){
+            vida = vida + incvida;
+        }
     }
     
     /*

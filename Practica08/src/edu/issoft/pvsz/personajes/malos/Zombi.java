@@ -13,68 +13,59 @@ public class Zombi extends Personaje{
         this.ataque = ataque;
     }
     public Zombi(String nombre, boolean ataque){
-        super(nombre);
+        super(nombre, 3);
         this.ataque = ataque;
-        vida = 3;
     }
     public Zombi(String nombre){
-        super(nombre, vida);
-        vida = 3;
+        super(nombre, 3);
         ataque = false;
     }
+
     ///Metodo obtener detalles
-    public void getDetalle(){
-        return super.getDetalle() + " " + ataque;
+    public String getDetalle(){
+        return super.getDetalle()+" "+ataque;
     }
+
     ///Decrementos
     ///Decrementos sin atributo
     public void decVida(){
-        super(vida);
-        super.decVida();
         if (ataque == false){
-            vida = vida - 3;
+            super.decVida(3);
         }
         else if (ataque == true){
-            vida = vida - 2;
+            super.decVida(2);
         }
     }
     ///Decrementos con Atributos
     public void decVida(int dec){
-        super(vida);
-        super.decVida(dec);
         if (ataque == false){
-            vida = vida - (dec*3);
+            super.decVida(dec*3);
         }
         else if (ataque == true){
-            vida = vida - 2;
+            super.decVida(dec*2);
         }
     }
  
     
-
     ///INCREMENTOS
     ///Incremento sin Atribs
     public void addVida(){
-        super(vida);
-        super.addVida();
         if (ataque == false){
-            vida = vida + 0;
+            super.addVida(0);
         }
         else if (ataque == true){
-            vida = vida + 0;
+            super.addVida(0);
         }
 
     }
 
     //Incremento con atrib
-    public void addVida(int vid){
-        super(incvida);
-        vid = super(incvida);
+    public void addVida(int vida){
         if (ataque == true){
-            vida = vida + (incvida *3);
+            super.addVida(vida *3);
         }
         else if (ataque == false){
-            vida = vida + 0;
+            super.addVida(0);
         }
     }
 

@@ -1,11 +1,9 @@
 package edu.issoft.pvsz.pruebas;
-import edu.issoft.pvsz.personajes.*;
+import edu.issoft.pvsz.personajes.Personaje;
 import edu.issoft.pvsz.personajes.buenos.Planta;
 import edu.issoft.pvsz.personajes.malos.Zombi;
-
 import java.util.*;
 
-//se importa la clase de personaje
 public class PruebaPersonaje{
     public static void main(String[] args){
         int contador = 0;
@@ -20,7 +18,18 @@ public class PruebaPersonaje{
         Zombi zom01 = new Zombi("Armando", 80, false);
         Zombi zom02 = new Zombi("Areli", true);
         Zombi zom03 = new Zombi("Gerardo");
-        Personaje [] personajes = {per01, per02, per03, per04, per05, per06, per07, per08, per09};
+        //Array
+        Personaje personajes [] = new Personaje [9];
+        personajes [0] = per01;
+        personajes [1] = per02;
+        personajes [2] = plan01;
+        personajes [3] = plan02;
+        personajes [4] = plan03;
+        personajes [5] = plan04;
+        personajes [6] = zom01;
+        personajes [7] = zom02;
+        personajes [8] = zom03;
+
         for (Personaje p : personajes){
             contador = contador + 1;
             System.out.println(p.getDetalle());
@@ -29,13 +38,17 @@ public class PruebaPersonaje{
                 randnum = rnd.nextInt(100);
             }
             if (p instanceof Planta){
-                System.out.println("Soy Planta"+""+p.getescudo());
-                p.addVida(randnum);
+                Planta rx = (Planta) p;
+                System.out.println("Soy Planta");
+                System.out.println(rx.getEscudo());
+                rx.addVida(randnum);
 
             }
             if (p instanceof Zombi){
-                System.out.println("Soy Zombi"+""+p.getAtaque());
-                p.decVida(randnum);
+                Zombi rx = (Zombi) p;
+                System.out.println("Soy Zombi");
+                System.out.println(rx.getAtaque());
+                rx.decVida(randnum);
             }
             System.out.println(randnum);
             System.out.println("***Objeto "+ contador+"***");
