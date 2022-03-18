@@ -1,5 +1,5 @@
 public class Universitario{
-	String nombre;
+	protected String nombre;
 
 	public Universitario(String nombre){
 		this.nombre = nombre;
@@ -7,10 +7,13 @@ public class Universitario{
 
 	public boolean equals(Object u){
 		boolean result = false;
-		if ((o != null) && (o instanceof Universitario)){
+		if ((u != null) && (u instanceof Universitario)){
 			Universitario m = (Universitario) u;
+			if (nombre == u.nombre){
+				resultado = true;
+			}
 		}
-
+		return resultado;
 	}
 
 	public String toString(){

@@ -2,7 +2,7 @@ package src.mx.uaz.ingsoft.appsw.universitarios.maestros;
 public class Maestro extends Universitario{
 	public float sueldo;
 	//Verificación de sueldo
-	if ((sueldo < 100)&&(sueldo > 20000)){
+	if ((sueldo < 100) && (sueldo > 20000)){
 		this.sueldo = sueldo;
 	} else {
 		this.sueldo = 1000.00f;
@@ -22,7 +22,19 @@ public class Maestro extends Universitario{
 		if ((b != null) && (b instanceof Maestro)){
 			Universitario b = (Maestro) a;
 			//Uso de ambos atributos determin.
-			if ((sueldo == b.sueldo) && ()) 
+			if ((sueldo == b.sueldo) && (nombre == b.nombre)){
+				resultado = true;
+			}
 		}
+		return resultado;
+	}
+
+	public int hashCode(){
+		return nombre.hashCode()*((int) sueldo);
+	}
+
+	public String toString(float sueldo){
+		sueldo = (String) sueldo;
+		return ;
 	}
 }
