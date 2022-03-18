@@ -5,5 +5,7 @@ public class Veterinaria{
 		//Las clases abstractas NO SE PUEDEN INSTANCIAR
 		Animal p = new Perro("Chancho", true);
 		Animal g = new Gato("Michu", 13);
+		p.emitirSonido();
+		g.emitirSonido();
 	}
 }
