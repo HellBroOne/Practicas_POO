@@ -16,8 +16,9 @@ public class PruebaIguales {
 	    };
 
 	    //recorre el arreglo
-	    while (i < personas.length){
-	    	for (Universitario u : personas){
+	    int i = 0;
+	    while (i < personas.length) {
+	    	for (Universitario u : personas) {
 
 	    		//Comparaciones
 	    		if (Universitario u == Persona p) {
