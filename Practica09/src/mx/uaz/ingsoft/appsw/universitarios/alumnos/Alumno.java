@@ -37,7 +37,7 @@ public class Alumno extends Universitario{
 		return nombre.hashCode() * calificacion;
 	}
 	public String toString(int calificacion){
-		return nombre + calificacion;
+		return nombre + verificarCalif(calificacion);
 	}
 
 
