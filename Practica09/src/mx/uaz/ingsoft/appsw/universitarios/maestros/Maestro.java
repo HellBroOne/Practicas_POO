@@ -12,11 +12,14 @@ public class Maestro extends Universitario{
 		sueldo = 1000.00f;
 	}
 
-	//Verificación de sueldo
-	if ((sueldo < 100f) && (sueldo > 20000f)) {
-		this.sueldo = sueldo;
-	} else {
-		this.sueldo = 1000f;
+	public float verificarSueldo(float sueldo){
+		if ( (sueldo < 100f) && (sueldo > 20000f) ) {
+			this.sueldo = sueldo;
+		}
+		else {
+			sueldo = 1000f;
+		}
+		return sueldo;
 	}
 
 	public boolean equals(Object u){

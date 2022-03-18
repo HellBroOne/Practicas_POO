@@ -29,7 +29,7 @@ public class PruebaIguales {
 	    			System.out.println("**"+u.toString()+" es igual a "+personas[i].toString()+", son diferentes Objetos**");
 	    		}
 
-	    		if ((u.equals(personas[i]) == false) && (u != personas[i])){
+	    		if ( (u.equals(personas[i]) == false) || (u != personas[i]) ){
 	    			System.out.println(u.toString()+"!="+personas[i].toString());
 	    		}
 

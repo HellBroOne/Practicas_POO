@@ -11,12 +11,17 @@ public class Alumno extends Universitario{
 		super(nombre);
 		calificacion = 5;
 	}
-	//Verificar calificacion
-	if ((calificacion > 0) && (calificacion < 10)) {
-		this.calificacion = calificacion;
-	} else {
-		calificacion = 5;
+
+	public int verificarCalif(int calificacion){
+		if ( (calificacion > 0) && (calificacion < 10)) {
+			this.calificacion = calificacion;
+		}
+		else {
+			calificacion = 5;
+		}
+		return calificacion;
 	}
+
 
 	public boolean equals(Object u){
 		boolean result = false;
