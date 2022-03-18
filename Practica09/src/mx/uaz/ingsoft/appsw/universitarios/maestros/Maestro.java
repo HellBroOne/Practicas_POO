@@ -18,12 +18,12 @@ public class Maestro extends Universitario{
 		this.sueldo = 1000.00f;
 	}
 
-	public boolean equals(Universitario b){
-		boolean result = false;
-		if ((b != null) && (b instanceof Maestro)){
-			Universitario b = (Maestro) a;
+	public boolean equals(Object u){
+		boolean resultado = false;
+		if ((u != null) && (u instanceof Maestro)){
+			Universitario a = (Maestro) u;
 			//Uso de ambos atributos determin.
-			if ((sueldo == b.sueldo) && (nombre == b.nombre)){
+			if ((sueldo == a.sueldo) && (nombre == a.nombre)){
 				resultado = true;
 			}
 		}

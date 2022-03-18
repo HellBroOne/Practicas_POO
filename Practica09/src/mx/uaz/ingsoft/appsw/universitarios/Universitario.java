@@ -1,3 +1,4 @@
+package src.mx.uaz.ingsoft.appsw.universitarios;
 public class Universitario{
 	protected String nombre;
 
@@ -6,10 +7,10 @@ public class Universitario{
 	}
 
 	public boolean equals(Object u){
-		boolean result = false;
+		boolean resultado = false;
 		if ((u != null) && (u instanceof Universitario)){
 			Universitario m = (Universitario) u;
-			if (nombre == u.nombre){
+			if (nombre == m.nombre){
 				resultado = true;
 			}
 		}
