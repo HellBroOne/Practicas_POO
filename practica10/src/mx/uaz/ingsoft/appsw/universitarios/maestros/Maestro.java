@@ -38,6 +38,6 @@ public class Maestro extends Universitario{
 	}
 
 	public String toString(){
-		return "Maestro: " + nombre + verificarSueldo(sueldo);
+		return "Maestro: " + nombre +" "+ verificarSueldo(sueldo);
 	}
 }

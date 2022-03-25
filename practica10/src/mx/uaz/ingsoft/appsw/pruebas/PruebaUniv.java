@@ -16,7 +16,7 @@ public class PruebaUniv{
 		Tablero.insertar(new Alumno("David", 80));
 		Tablero.insertar(new Universitario("Maria Aide"));
 		Tablero.insertar(new Maestro("Christopher", 5000f), 6);
-		Tablero.insertar(new Alumno("Areli", 5));
+		Tablero.insertar(new Alumno("Areli", 5) );
 
 		Tablero.mostrar();
 
