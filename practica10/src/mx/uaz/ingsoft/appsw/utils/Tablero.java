@@ -18,46 +18,51 @@ public class Tablero{
 			}
 		}
 		System.out.println("* * * * * *");
+		poss = -1;
 	}
 
 	public static void insertar(Universitario u){
-		poss = -1;
 		if ((poss > 0) || (poss < MAX)){
-			personas[(poss+1)] = u;
-		} else {
-			poss = -1;
-			System.out.println("Imposible insertar en "+poss);
+			try{
+				personas[(poss+1)] = u;
+			} catch (ArrayIndexOutOfBoundsException nde){
+				System.err.println("Imposible insertar en "+poss);
+			}
 		}
 	}
 
 	public static void insertar(Universitario u, int idx){
 		poss = idx;
 		if ((poss > 0) || (poss < MAX)){
-			personas[poss] = u;
-		} else {
-			poss = -1;
-			System.out.println("Imposible insertar en "+poss);
-		}
+			try{
+				personas[poss] = u;
+			} catch (ArrayIndexOutOfBoundsException nde){
+				System.err.println("Imposible insertar en "+poss);
+			}
+		} 
 	}
 
 	public static void borrar(){
 		poss = -1;
 		if ((poss > 0) || (poss < MAX)){
-			personas[poss] = null;
-			poss = poss -1;
-		} else {
-			poss = -1;
-			System.out.println("Imposible borrar en "+poss);
+			try{
+				personas[poss] = null;
+			} catch (ArrayIndexOutOfBoundsException nde){
+				System.err.println("Imposible borrar en "+poss);
+			}
+			poss = poss -1;		
 		}
 	}
 
 	public static void borrar(int idx){
 		poss = idx;
 		if ((poss > 0) || (poss < MAX)){
-			personas[poss] = null;
-		} else {
-			poss = -1;
-			System.out.println("Imposible borrar en "+poss);
+			try{
+				personas[poss] = null;
+			} catch (ArrayIndexOutOfBoundsException nde){
+				System.err.println("Imposible borrar en "+poss);
+			}
 		}
+
 	}
 }
