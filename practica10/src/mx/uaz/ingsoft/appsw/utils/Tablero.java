@@ -6,7 +6,7 @@ public class Tablero{
 	private static int poss = -1;
 	private static Universitario[] personas = new Universitario[MAX];
 
-	public Tablero(){}
+	private Tablero(){}
 
 	public static void mostrar(){
 		System.out.println("* El tablero contiene *");
@@ -18,49 +18,40 @@ public class Tablero{
 			}
 		}
 		System.out.println("* * * * * *");
-		//cuando se sale del ciclo foreach, se volverá al valor inicial
 	}
 
-	public static void insertar(Universitario u){
+	public static void insertar(Universitario u){ //Sin try-catch
 		poss = poss + 1;
-		if ((poss >= 0) || (poss < MAX)){
-			try{
-				personas[poss] = u;
-			} catch (ArrayIndexOutOfBoundsException nde){
-				System.err.println("Imposible insertar en "+poss);
-				poss = -1;
-			}	
+		if ((poss < 0) || (poss > MAX)){
+			System.out.println("Imposible insertar en "+poss);
+			poss = -1;
+		} else{	
+			personas[poss] = u;
 		}
 	}
 
 	public static void insertar(Universitario u, int idx){
-		if ((idx >= 0) || (idx < MAX)){
-			try{
+		if ((idx < 0) || (idx > MAX)){
+				System.out.println("Imposible insertar en "+idx);
+			} else {
 				personas[idx] = u;
-			} catch (ArrayIndexOutOfBoundsException nde){
-				System.err.println("Imposible insertar en "+idx);
 			}
 		}
-	}
 
 	public static void borrar(){
-		if ((poss >= 0) || (poss < MAX)){
-			try{
-				personas[poss] = null;
-			} catch (ArrayIndexOutOfBoundsException nde){
-				System.err.println("Imposible borrar en "+poss);
+		if ((poss < 0) || (poss > MAX)){
+				System.out.println("Imposible borrar en "+poss);
 				poss = -1;
-			}	
-		}
-	}
+			} else {
+				personas[poss] = null;
+			}
+		}	
 
 	public static void borrar(int idx){
-		if ((idx >= 0) || (idx < MAX)){
-			try{
+		if ((idx < 0) || (idx > MAX)){
+				System.out.println("Imposible borrar en "+idx);
+			} else {
 				personas[idx] = null;
-			} catch (ArrayIndexOutOfBoundsException nde){
-				System.err.println("Imposible borrar en "+idx);
 			}
 		}
-	}
 }
