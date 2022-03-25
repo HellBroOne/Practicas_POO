@@ -6,8 +6,11 @@ import mx.uaz.ingsoft.appsw.utils.*;
 
 public class PruebaUniv{
 	public static void main(String[] args){
+		///ERRORES en el Runtime:
+		//Si muestra los espacios vacíos
 		Tablero.mostrar();
 
+		//Error de inserción
 		Tablero.insertar(new Universitario("Jose Antonio"));
 		Tablero.insertar(new Maestro("Rosario", 10f), 4);
 		Tablero.insertar(new Alumno("David", 80));
