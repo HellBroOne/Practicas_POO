@@ -1,7 +1,8 @@
+package mx.uaz.ingsoft.appsw.utils;
 public class Tablero{
 	public static final int MAX = 5;
 	private static int poss = -1;
-	private Universitario[MAX] personas;
+	private Universitario[] personas = new Universitario[MAX];
 
 	public Tablero(){}
 
@@ -18,21 +19,37 @@ public class Tablero{
 	}
 
 	public static void insertar(Univarsitario u){
-		personas[(poss+1)] = new Universitario u;
+		if ((poss > 0) || (poss < MAX)){
+			personas[(poss+1)] = u;
+		} else {
+			System.out.println("Imposible insertar en "+poss);
+		}
 	}
 
 	public static void insertar(Universitario u, int idx){
-		poss = idx;
-		personas[(poss)] = new Universitario u;
+		if ((poss > 0) || (poss < MAX)){
+			poss = idx;
+			personas[poss] = u;
+		} else {
+			System.out.println("Imposible insertar en "+poss);
+		}
 	}
 
 	public static void borrar(){
-		personas[poss] = null;
-		poss = poss -1;
+		if ((poss > 0) || (poss < MAX)){
+			personas[poss] = null;
+			poss = poss -1;
+		} else {
+			System.out.prinln("Imposible borrar en "+poss);
+		}
 	}
 
-	public static void borrar(int idx){	
-		poss = idx;
-		personas[poss] = null;
+	public static void borrar(int idx){
+		if ((poss > 0) || (poss < MAX)){
+			poss = idx;
+			personas[poss] = null;
+		} else {
+			System.out.prinln("Imposible borrar en "+poss);
+		}
 	}
 }
