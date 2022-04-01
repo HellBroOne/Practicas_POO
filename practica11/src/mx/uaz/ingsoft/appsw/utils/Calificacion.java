@@ -1,4 +1,4 @@
-//IMPORTS
+package mx.uaz.ingsoft.appsw.utils;
 
 public enum Calificacion{
 	CERO(0),

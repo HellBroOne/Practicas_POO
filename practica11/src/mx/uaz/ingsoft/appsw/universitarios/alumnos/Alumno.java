@@ -1,6 +1,6 @@
 package mx.uaz.ingsoft.appsw.universitarios.alumnos;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
-import static mx.uaz.ingsoft.appsw.utils.Calificacion;
+import mx.uaz.ingsoft.appsw.utils.Calificacion;
 
 public class Alumno extends Universitario{
 	private static Calificacion[] calificaciones = new Calificacion[MXC];
@@ -15,13 +15,13 @@ public class Alumno extends Universitario{
 	}
 
 	public int verificarCalif(int calificacion){
-		if ( (calificacion < 0) && (calificacion > 10)) {
-			this.calificacion = calificacion;
+		if ( (calif < 0) && (calif > 10)) {
+			this.calif = calif;
 		}
 		else {
-			calificacion = 5;
+			calif = 5;
 		}
-		return calificacion;
+		return calif;
 	}
 
 
@@ -48,24 +48,27 @@ public class Alumno extends Universitario{
 	}
 
 	public float getPromedio(){
+		contador = 0; 
 		for (Calificacion c : calificaciones) {
-			promedio = promedio + calificacion[c];
+			promedio = promedio + calificacion[contador];
+			contador = contador + 1;
 		}
+		contador = 0; 
 		return promedio;
 	}
 
-	public setCalificacion(){
+	public void setCalificacion(){
 		for (Calificacion u : calificaciones) {
 			u = Calificacion.CERO;
 		}
-		promedio.getPromedio();
+		getPromedio();
 	}
 
-	public setCalificacion(Calificacion c, int i){
-		if ((indice > 0) && (indice < MXC)){
-			calificaciones[indice] = c;
+	public void setCalificacion(Calificacion c, int i){
+		if ((i > 0) && (i < MXC)){
+			calificaciones[i] = c;
 		} 
-		System.out.println("Imposible poner calificacion en "+indice);
+		System.out.println("Imposible poner calificacion en "+i);
 	}
 
 
