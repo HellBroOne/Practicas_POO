@@ -12,7 +12,7 @@ public class PruebaEnum{
 		System.out.println(a);
 
 		for (int i = 0; i<MXC; i++){
-			c = Tablero.getCalifRand();
+			Calificacion c = getCalifRand();
 			a.setCalificacion(c, i);
 			System.out.println(a);
 		}

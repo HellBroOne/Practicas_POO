@@ -60,7 +60,7 @@ public class Alumno extends Universitario{
 		return promedio;
 	}
 
-	public void setCalificacion(){
+	public void setCalificacion(){ 
 		for (Calificacion u : calificaciones) {
 			u = Calificacion.CERO;
 		}
