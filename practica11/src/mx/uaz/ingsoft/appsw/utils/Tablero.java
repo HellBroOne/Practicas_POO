@@ -5,8 +5,8 @@ import mx.uaz.ingsoft.appsw.utils.Calificacion;
 public class Tablero{
 	public static final int MAX = 5;
 
-	public static final int MXC = 5; //practica 11
-	
+	public static int MXC = 5; //practica 11
+
 	private static int poss = -1;
 	private static Universitario[] personas = new Universitario[MAX];
 
@@ -59,7 +59,7 @@ public class Tablero{
 			}
 		}
 
-	public Calificacion getCalifRand(){
+	public static Calificacion getCalifRand(){
 		int rand = (int)(Math.random()*10)+1;
 		switch (rand){
 		    case 1: return Calificacion.UNO;
