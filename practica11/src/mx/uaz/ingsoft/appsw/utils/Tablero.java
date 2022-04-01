@@ -57,7 +57,7 @@ public class Tablero{
 			}
 		}
 
-	public getCalifRand(){
+	public float getCalifRand(){
 		int rand = (int)(Math.random()*10)+1;
 		switch (rand){
 		    case 1: return Calificacion.UNO;
@@ -70,6 +70,7 @@ public class Tablero{
 		  	case 8: return Calificacion.OCHO;
 		  	case 9: return Calificacion.NUEVE;
 		  	case 10: return Calificacion.DIEZ;
+		  	default: return Calificacion.CERO;
 		}
 	}
 }

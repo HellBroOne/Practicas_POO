@@ -11,6 +11,8 @@ public class PruebaEnum{
 
 		for (int i = 0; i<MXC; i++){
 			Calificacion c = Tablero.getCalifRand();
+			a.setCalificacion(c, i);
+			System.out.println(a);
 		}
 
 	}

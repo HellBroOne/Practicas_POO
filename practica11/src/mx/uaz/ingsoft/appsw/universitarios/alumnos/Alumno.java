@@ -61,7 +61,7 @@ public class Alumno extends Universitario{
 		promedio.getPromedio();
 	}
 
-	public setCalificacion(Calificacion c, int indice){
+	public setCalificacion(Calificacion c, int i){
 		if ((indice > 0) && (indice < MXC)){
 			calificaciones[indice] = c;
 		} 

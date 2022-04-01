@@ -13,9 +13,9 @@ public enum Calificacion{
 	NUEVE(9),
 	DIEZ(10);
 
-	public int calif;
+	private int calif;
 
-	public Calificacion(int calif){
+	private Calificacion(int calif){
 		this.calif = calif;
 	}
 
