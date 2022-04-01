@@ -1,15 +1,19 @@
 package mx.uaz.ingsoft.appsw.universitarios.alumnos;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
+import static mx.uaz.ingsoft.appsw.utils.Calificacion;
 
 public class Alumno extends Universitario{
-	private int calificacion;
+	private static Calificacion[] calificaciones = new Calificacion[MXC];
+	private float promedio; //practica11
+
 	//Constructores
-	public Alumno(String nombre, int calificacion){
-		super(nombre);
-	}
+	
 	public Alumno(String nombre){
 		super(nombre);
-		calificacion = 5;
+		//Este es con metodo, al igual que el del promedio
+		for (Calificacion u : calificaciones) {
+			u = Calificacion.CERO;
+		}
 	}
 
 	public int verificarCalif(int calificacion){
@@ -27,18 +31,28 @@ public class Alumno extends Universitario{
 		boolean result = false;
 		if ((u != null)&&(u instanceof Alumno)){
 			Alumno a = (Alumno) u;
-			if ( (nombre == a.nombre) && (calificacion == a.calificacion) ){
+			if ( (nombre == a.nombre) && (promedio == a.promedio) ){
 				result = true;
 			}
 		}
 		return result;
 	}
 	public int hashCode(){
-		return nombre.hashCode() * calificacion;
+		return (int) (nombre.hashCode() * promedio);
 	}
 	public String toString(){
 		return "Alumno: "+ nombre +" "+ verificarCalif(calificacion);
 	}
 
+	//Metodos practica 11
+	public String getCalificaciones(){
+		return calificaciones;
+	}
+
+	public float getPromedio(){
+		for (Calificacion c : calificaciones) {
+			Calificac
+		}
+	}
 
 }
