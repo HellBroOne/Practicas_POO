@@ -55,13 +55,16 @@ public class Alumno extends Universitario{
 			promedio = promedio + calificaciones[contador].getCalif();
 			contador = contador + 1;
 		}
+		promedio = promedio/Tablero.MXC;
 		contador = 0; 
 		return promedio;
 	}
 
-	public void setCalificacion(){ 
+	public void setCalificacion(){
+	    int contadorarray = 0; 
 		for (Calificacion u : calificaciones) {
-			u = Calificacion.CERO;
+			calificaciones[contadorarray] = Calificacion.CERO;
+			contadorarray = contadorarray + 1;
 		}
 		getPromedio();
 	}
