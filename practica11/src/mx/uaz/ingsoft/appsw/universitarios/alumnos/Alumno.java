@@ -4,6 +4,7 @@ import mx.uaz.ingsoft.appsw.utils.Calificacion;
 import mx.uaz.ingsoft.appsw.utils.Tablero;
 //Imports para el redondeo
 import java.text.DecimalFormat;
+import java.math.RoundingMode;
 
 public class Alumno extends Universitario{
 	private static Calificacion[] calificaciones = new Calificacion[Tablero.MXC];
@@ -42,15 +43,14 @@ public class Alumno extends Universitario{
 		return (int) (nombre.hashCode() * promedio);
 	}
 	public String toString(){
-		//Aquí en string va format
-		DecimalFormat decimal = new DecimalFormat("#.0");
+		//Aquí en string va format, ya que ambos son tipos String
+		DecimalFormat decimal = new DecimalFormat("#.#");
 		return "Alumno: "+ nombre +" "+ getCalificaciones()+" "+decimal.format(getPromedio());
 	}
 
 	//Metodos practica 11
 	public String getCalificaciones(){
-		return calificaciones[0].getCalif()+" "+calificaciones[1].getCalif()+" "+calificaciones[2].getCalif()+" "+
-		calificaciones[3].getCalif()+" "+calificaciones[4].getCalif();
+		return calificaciones[0].getCalif()+" "+calificaciones[1].getCalif()+" "+calificaciones[2].getCalif()+" "+calificaciones[3].getCalif()+" "+calificaciones[4].getCalif();
 	}
 
 	public float getPromedio(){
