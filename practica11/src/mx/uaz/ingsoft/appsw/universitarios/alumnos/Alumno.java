@@ -15,13 +15,13 @@ public class Alumno extends Universitario{
 	}
 
 	public int verificarCalif(int calificacion){
-		if ( (calif < 0) && (calif > 10)) {
-			this.calif = calif;
+		if ( (calificacion < 0) && (calificacion > 10)) {
+			this.calificacion = calificacion;
 		}
 		else {
-			calif = 5;
+			calificacion = 5;
 		}
-		return calif;
+		return calificacion;
 	}
 
 
@@ -44,13 +44,16 @@ public class Alumno extends Universitario{
 
 	//Metodos practica 11
 	public String getCalificaciones(){
-		return calificaciones;
+		int counter = 0;
+		for (Calificacion c : calificaciones) {
+			return (String) (calificaciones[counter]);
+		}
 	}
 
 	public float getPromedio(){
-		contador = 0; 
+		int contador = 0; 
 		for (Calificacion c : calificaciones) {
-			promedio = promedio + calificacion[contador];
+			promedio = promedio + calificaciones[contador];
 			contador = contador + 1;
 		}
 		contador = 0; 
