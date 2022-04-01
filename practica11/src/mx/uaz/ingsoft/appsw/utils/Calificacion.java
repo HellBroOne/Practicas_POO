@@ -18,4 +18,11 @@ public class Calificacion{
 	public Calificacion(int calif){
 		this.calif = calif;
 	}
+
+	public int getCalif(){
+		return calif;
+	}
+	////-----------////
+
+	
 }
