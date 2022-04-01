@@ -2,6 +2,8 @@ package mx.uaz.ingsoft.appsw.universitarios.alumnos;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 import mx.uaz.ingsoft.appsw.utils.Calificacion;
 import mx.uaz.ingsoft.appsw.utils.Tablero;
+//Imports para el redondeo
+import java.text.DecimalFormat;
 
 public class Alumno extends Universitario{
 	private static Calificacion[] calificaciones = new Calificacion[Tablero.MXC];
@@ -40,7 +42,9 @@ public class Alumno extends Universitario{
 		return (int) (nombre.hashCode() * promedio);
 	}
 	public String toString(){
-		return "Alumno: "+ nombre +" "+ getCalificaciones()+" "+getPromedio();
+		//Aquí en string va format
+		DecimalFormat decimal = new DecimalFormat("#.0");
+		return "Alumno: "+ nombre +" "+ getCalificaciones()+" "+decimal.format(getPromedio());
 	}
 
 	//Metodos practica 11
@@ -55,6 +59,7 @@ public class Alumno extends Universitario{
 			promedio = promedio + calificaciones[contador].getCalif();
 			contador = contador + 1;
 		}
+		//Error: DecimalFormat NO puede ir aquí, por que uno es float y otro String
 		promedio = promedio/Tablero.MXC;
 		contador = 0; 
 		return promedio;
@@ -70,7 +75,7 @@ public class Alumno extends Universitario{
 	}
 
 	public void setCalificacion(Calificacion c, int i){
-		if ((i > 0) && (i < Tablero.MXC)){
+		if ((i >= 0) && (i <= Tablero.MXC)){
 			calificaciones[i] = c;
 		} 
 	}
