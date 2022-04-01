@@ -20,9 +20,9 @@ public class Tablero{
 		System.out.println("* * * * * *");
 	}
 
-	public static void insertar(Universitario u){ //Sin try-catch
+	public static void insertar(Universitario u){ //Sin try-catch, se solucionó creando verificaciones if-else en vez de los try-catch
 		poss = poss + 1;
-		if ((poss < 0) || (poss > MAX)){
+		if ((poss <= 0) || (poss >= MAX)){
 			System.out.println("Imposible insertar en "+poss);
 			poss = -1;
 		} else{	
@@ -31,7 +31,7 @@ public class Tablero{
 	}
 
 	public static void insertar(Universitario u, int idx){
-		if ((idx < 0) || (idx > MAX)){
+		if ((idx <= 0) || (idx >= MAX)){
 				System.out.println("Imposible insertar en "+idx);
 			} else {
 				personas[idx] = u;
@@ -39,7 +39,7 @@ public class Tablero{
 		}
 
 	public static void borrar(){
-		if ((poss < 0) || (poss > MAX)){
+		if ((poss <= 0) || (poss >= MAX)){
 				System.out.println("Imposible borrar en "+poss);
 				poss = -1;
 			} else {
@@ -48,7 +48,7 @@ public class Tablero{
 		}	
 
 	public static void borrar(int idx){
-		if ((idx < 0) || (idx > MAX)){
+		if ((idx <= 0) || (idx >= MAX)){
 				System.out.println("Imposible borrar en "+idx);
 			} else {
 				personas[idx] = null;

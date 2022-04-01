@@ -1,11 +1,12 @@
 public class Perro extends Animal{
 	//1 error de perro abstracto
 	private boolean moquillo;
+	private int patas;
 
 	public Perro(String name){
 		super(name);
 		this.moquillo = moquillo;
-
+		this.patas = patas;
 	}
 	//2 error de constructor, creamos constructor
 	//ELEM. ABSTRACTO
@@ -20,6 +21,14 @@ public class Perro extends Animal{
 			Perro p = (Perro) o;
 			if (this.nombre.equals(p.getNombre()) && moquillo == p.moquillo)
 		}
+	}
+
+	public boolean setPatas(int patas){
+		boolean resultado = false;
+		if ((patas>=0)&&(patas<=6)){
+			this.patas = patas;
+			resultado = true;
+		} return resultado;
 	}
 	
 }
