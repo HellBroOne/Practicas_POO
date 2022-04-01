@@ -73,7 +73,6 @@ public class Alumno extends Universitario{
 		if ((i > 0) && (i < Tablero.MXC)){
 			calificaciones[i] = c;
 		} 
-		System.out.println("Imposible poner calificacion en "+i);
 	}
 
 
