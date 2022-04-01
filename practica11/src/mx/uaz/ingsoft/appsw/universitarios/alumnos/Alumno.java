@@ -11,9 +11,7 @@ public class Alumno extends Universitario{
 	public Alumno(String nombre){
 		super(nombre);
 		//Este es con metodo, al igual que el del promedio
-		for (Calificacion u : calificaciones) {
-			u = Calificacion.CERO;
-		}
+		setCalificacion();
 	}
 
 	public int verificarCalif(int calificacion){
@@ -41,7 +39,7 @@ public class Alumno extends Universitario{
 		return (int) (nombre.hashCode() * promedio);
 	}
 	public String toString(){
-		return "Alumno: "+ nombre +" "+ verificarCalif(calificacion);
+		return "Alumno: "+ nombre +" "+ getCalificaciones()+" "+getPromedio();
 	}
 
 	//Metodos practica 11
@@ -51,8 +49,26 @@ public class Alumno extends Universitario{
 
 	public float getPromedio(){
 		for (Calificacion c : calificaciones) {
-			Calificac
+			promedio = promedio + calificacion[c];
 		}
+		return promedio;
 	}
+
+	public setCalificacion(){
+		for (Calificacion u : calificaciones) {
+			u = Calificacion.CERO;
+		}
+		promedio.getPromedio();
+	}
+
+	public setCalificacion(Calificacion c, int indice){
+		if ((indice > 0) && (indice < MXC)){
+			calificaciones[indice] = c;
+		} 
+		System.out.println("Imposible poner calificacion en "+indice);
+	}
+
+
+
 
 }
