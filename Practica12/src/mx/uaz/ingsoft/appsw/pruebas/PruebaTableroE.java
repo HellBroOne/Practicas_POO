@@ -29,17 +29,14 @@ public class PruebaTableroE{
 		for (i = 0; i < Tablero.MAX; i++){
 			//datos[i];
 			int x = (int)(Math.random()*10)+1;
-			try{
-				if ((i%2) == 0){
-					Tablero.insertar(datos[i]);
-				}
-				if ((i%2) != 0){
-					Tablero.insertar(datos[i], x);
-				}
-
-			} catch (ArrayIndexOutOfBoundsException nde){
-				throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
+			if ((i%2) == 0){
+				Tablero.insertar(datos[i]);
 			}
+			if ((i%2) != 0){
+				Tablero.insertar(datos[i], x);
+			}
+
+				//throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
 			
 		}
 

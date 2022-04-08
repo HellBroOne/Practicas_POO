@@ -1,7 +1,6 @@
 package mx.uaz.ingsoft.appsw.utils;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
-import mx.uaz.ingsoft.appsw.utils.Calificacion;
-import mx.uaz.ingsoft.appsw.utils.TheException;
+
 
 public class Tablero{
 	public static final int MAX = 5;
@@ -25,25 +24,25 @@ public class Tablero{
 		System.out.println("* * * * * *");
 	}
 
-	public static void insertar(Universitario u) throws TheExecption{ //Ahora si llevan Try-Catch los métodos insertar y borrar
+	public static void insertar(Universitario u) throws TheException{ //Ahora si llevan Try-Catch los métodos insertar y borrar
 		poss = poss + 1;
 		if ((poss <= 0) || (poss >= MAX)){
-			throw new TheExecption ("No es posible insertar en la posicion ", poss);
+			throw new TheException ("No es posible insertar en la posicion ", poss);
 			poss = -1;
 		} else{	
 			personas[poss] = u;
 		}
 	}
 
-	public static void insertar(Universitario u, int idx) throws TheExecption{
+	public static void insertar(Universitario u, int idx) throws TheException{
 		if ((idx <= 0) || (idx >= MAX)){
-				throw new TheExecption ("No es posible insertar en la posicion ", idx);
+				throw new TheException ("No es posible insertar en la posicion ", idx);
 			} else {
 				personas[idx] = u;
 			}
 		}
 
-	public static void borrar() throws TheExecption{
+	public static void borrar() throws TheException{
 		if ((poss <= 0) || (poss >= MAX)){
 				throw new TheException ("No es posible borrar en la posicion ", poss);
 				poss = -1;
@@ -52,7 +51,7 @@ public class Tablero{
 			}
 		}	
 
-	public static void borrar(int idx) throws TheExecption{
+	public static void borrar(int idx) throws TheException{
 		if ((idx <= 0) || (idx >= MAX)){
 				throw new TheException ("No es posible borrar en la posicion ", idx);
 			} else {

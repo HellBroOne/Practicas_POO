@@ -1,8 +1,8 @@
 package mx.uaz.ingsoft.appsw.utils;
-public class TheExecption extends Exception{
+public class TheException extends Exception{
 	private int poss;
 
-	public TheExecption(String msg, int poss){
+	public TheException(String msg, int poss){
 		super(msg);
 		this.poss = poss;
 	}
