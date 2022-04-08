@@ -36,7 +36,7 @@ public class Tablero{
 
 	public static void insertar(Universitario u, int idx) throws TheExecption{
 		if ((idx <= 0) || (idx >= MAX)){
-				System.out.println("Imposible insertar en "+idx);
+				throw new TheException ("No es posible insertar en la posicion "+idx);
 			} else {
 				personas[idx] = u;
 			}
@@ -44,7 +44,7 @@ public class Tablero{
 
 	public static void borrar() throws TheExecption{
 		if ((poss <= 0) || (poss >= MAX)){
-				System.out.println("Imposible borrar en "+poss);
+				throw new TheException ("No es posible borrar en la posicion "+poss);
 				poss = -1;
 			} else {
 				personas[poss] = null;
@@ -53,7 +53,7 @@ public class Tablero{
 
 	public static void borrar(int idx) throws TheExecption{
 		if ((idx <= 0) || (idx >= MAX)){
-				System.out.println("Imposible borrar en "+idx);
+				throw new TheException ("No es posible borrar en la posicion "+idx);
 			} else {
 				personas[idx] = null;
 			}
