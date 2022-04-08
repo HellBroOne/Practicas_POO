@@ -21,6 +21,10 @@ public class PruebaTableroE{
 		Tablero.mostrar();
 
 		//ciclo
-		for (int i = 0; i<Tablero.MAX; )
+		for (int i = 0; i<Tablero.MAX; i++){
+			datos[i];
+			int rand = (int)(Math.random()*10)+1;
+			
+		}
 	}
 }
