@@ -1,3 +1,4 @@
+package mx.uaz.ingsoft.appsw.utils;
 public class TheExecption extends Exception{
 	private int poss;
 

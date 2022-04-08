@@ -25,18 +25,19 @@ public class PruebaTableroE{
 		Tablero.mostrar();
 
 		//ciclo
-		for (int i = 0; i < Tablero.MAX; i++){
+		int i = 0;
+		for (i = 0; i < Tablero.MAX; i++){
 			//datos[i];
 			int x = (int)(Math.random()*10)+1;
 			try{
 				if ((i%2) == 0){
-					Tablero.insertar(i);
+					Tablero.insertar(datos[i]);
 				}
 				if ((i%2) != 0){
-					Tablero.insertar(i, x);
+					Tablero.insertar(datos[i], x);
 				}
 
-			} catch (ArrayIndexOutOfBoundsException te){
+			} catch (ArrayIndexOutOfBoundsException nde){
 				throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
 			}
 			
@@ -44,16 +45,17 @@ public class PruebaTableroE{
 
 		Tablero.mostrar();
 
-		for (int ind; ind < 6; ind++){
+		int ind = 0;
+		for (ind = 0; ind < 6; ind++){
 			int x = (int)(Math.random()*10)+1;
 			try{
 				if ((i%2) == 0){
-					Tablero.borrar(i);
+					Tablero.borrar(datos[i]);
 				}
 				if ((i%2) != 0){
-					Tablero.borrar(i, x);
+					Tablero.borrar(datos[i], x);
 				}
-			} catch (ArrayIndexOutOfBoundsException te){
+			} catch (ArrayIndexOutOfBoundsException nde){
 				throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
 			}
 		}
