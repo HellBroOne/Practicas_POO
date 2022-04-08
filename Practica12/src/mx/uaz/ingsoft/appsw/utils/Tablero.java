@@ -26,7 +26,7 @@ public class Tablero{
 
 	public static void insertar(Universitario u) throws TheException{ //Ahora si llevan Try-Catch los métodos insertar y borrar
 		poss = poss + 1;
-		if ((poss <= 0) || (poss >= MAX)){
+		if ((poss < 0) || (poss >= MAX)){
 			throw new TheException ("No es posible insertar en la posicion ", poss);
 		} else{	
 			personas[poss] = u;
@@ -34,7 +34,7 @@ public class Tablero{
 	}
 
 	public static void insertar(Universitario u, int idx) throws TheException{
-		if ((idx <= 0) || (idx >= MAX)){
+		if ((idx < 0) || (idx >= MAX)){
 				throw new TheException ("No es posible insertar en la posicion ", idx);
 			} else {
 				personas[idx] = u;
@@ -42,7 +42,7 @@ public class Tablero{
 		}
 
 	public static void borrar() throws TheException{
-		if ((poss <= 0) || (poss >= MAX)){
+		if ((poss < 0) || (poss >= MAX)){
 				throw new TheException ("No es posible borrar en la posicion ", poss);
 			} else {
 				personas[poss] = null;
@@ -50,7 +50,7 @@ public class Tablero{
 		}	
 
 	public static void borrar(int idx) throws TheException{
-		if ((idx <= 0) || (idx >= MAX)){
+		if ((idx < 0) || (idx >= MAX)){
 				throw new TheException ("No es posible borrar en la posicion ", idx);
 			} else {
 				personas[idx] = null;
