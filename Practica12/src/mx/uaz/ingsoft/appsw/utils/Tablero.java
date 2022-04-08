@@ -24,17 +24,17 @@ public class Tablero{
 		System.out.println("* * * * * *");
 	}
 
-	public static void insertar(Universitario u){ //Sin try-catch, se solucionó creando verificaciones if-else en vez de los try-catch
+	public static void insertar(Universitario u) throws TheExecption{ //Ahora si llevan Try-Catch los métodos insertar y borrar
 		poss = poss + 1;
 		if ((poss <= 0) || (poss >= MAX)){
-			System.out.println("Imposible insertar en "+poss);
+			throw new TheException ("No es posible insertar en la posicion "+poss);
 			poss = -1;
 		} else{	
 			personas[poss] = u;
 		}
 	}
 
-	public static void insertar(Universitario u, int idx){
+	public static void insertar(Universitario u, int idx) throws TheExecption{
 		if ((idx <= 0) || (idx >= MAX)){
 				System.out.println("Imposible insertar en "+idx);
 			} else {
@@ -42,7 +42,7 @@ public class Tablero{
 			}
 		}
 
-	public static void borrar(){
+	public static void borrar() throws TheExecption{
 		if ((poss <= 0) || (poss >= MAX)){
 				System.out.println("Imposible borrar en "+poss);
 				poss = -1;
@@ -51,7 +51,7 @@ public class Tablero{
 			}
 		}	
 
-	public static void borrar(int idx){
+	public static void borrar(int idx) throws TheExecption{
 		if ((idx <= 0) || (idx >= MAX)){
 				System.out.println("Imposible borrar en "+idx);
 			} else {
