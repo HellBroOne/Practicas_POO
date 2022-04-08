@@ -7,7 +7,12 @@ public class TheException extends Exception{
 		this.poss = poss;
 	}
 
-	public int getPoss(int poss){
+	public String getMessage(String msg){
+		return msg;
+	}
+
+	public int getPoss(){
 		return poss;
 	}
+
 }

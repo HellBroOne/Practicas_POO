@@ -28,7 +28,6 @@ public class Tablero{
 		poss = poss + 1;
 		if ((poss <= 0) || (poss >= MAX)){
 			throw new TheException ("No es posible insertar en la posicion ", poss);
-			poss = -1;
 		} else{	
 			personas[poss] = u;
 		}
@@ -45,7 +44,6 @@ public class Tablero{
 	public static void borrar() throws TheException{
 		if ((poss <= 0) || (poss >= MAX)){
 				throw new TheException ("No es posible borrar en la posicion ", poss);
-				poss = -1;
 			} else {
 				personas[poss] = null;
 			}

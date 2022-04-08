@@ -7,6 +7,7 @@ import mx.uaz.ingsoft.appsw.utils.Tablero;
 
 public class PruebaTableroE{
 	public static void main(String[] args){
+
 		Universitario[] datos = {
 			new Universitario("Antonio"),
 			new Maestro("Rosario", 10f),
@@ -27,15 +28,16 @@ public class PruebaTableroE{
 		//ciclo
 		int i = 0;
 		for (i = 0; i < Tablero.MAX; i++){
+			Universitario u = datos[i];
 			int x = (int)(Math.random()*10)+1;
 			try{
 				if ((i%2) == 0){
-					Tablero.insertar(datos[i]);
+					Tablero.insertar(u);
 				}
 				if ((i%2) != 0){
-					Tablero.insertar(datos[i], x);
+					Tablero.insertar(u, x);
 				}
-			} catch (TheException fe){
+			} catch (TheException te){
 				System.err.println(te.getMessage()+" "+te.getPoss());
 			}
 			
@@ -45,15 +47,16 @@ public class PruebaTableroE{
 
 		int ind = 0;
 		for (ind = 0; ind < 6; ind++){
+			Universitario u = datos[ind];
 			int x = (int)(Math.random()*10)+1;
 			try{
 				if ((i%2) == 0){
-					Tablero.borrar(datos[i]);
+					Tablero.borrar();
 				}
 				if ((i%2) != 0){
-					Tablero.borrar(datos[i], x);
+					Tablero.borrar(x);
 				}
-			} catch (TheException fe){
+			} catch (TheException te){
 				System.err.println(te.getMessage()+" "+te.getPoss());
 			}
 			
