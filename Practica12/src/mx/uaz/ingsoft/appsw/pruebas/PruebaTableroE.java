@@ -2,7 +2,7 @@ package mx.uaz.ingsoft.appsw.pruebas;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 import mx.uaz.ingsoft.appsw.universitarios.maestros.Maestro;
 import mx.uaz.ingsoft.appsw.universitarios.alumnos.Alumno;
-import mx.uaz.ingsoft.appsw.utils.Calificacion;
+import mx.uaz.ingsoft.appsw.utils.TheException;
 import mx.uaz.ingsoft.appsw.utils.Tablero;
 
 public class PruebaTableroE{
@@ -35,8 +35,9 @@ public class PruebaTableroE{
 				if ((i%2) != 0){
 					Tablero.insertar(datos[i], x);
 				}
+			} catch (TheException fe){
+				System.err.println(te.getMessage()+" "+te.getPoss());
 			}
-				//throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
 			
 		}
 
@@ -45,13 +46,16 @@ public class PruebaTableroE{
 		int ind = 0;
 		for (ind = 0; ind < 6; ind++){
 			int x = (int)(Math.random()*10)+1;
-			if ((i%2) == 0){
-				Tablero.borrar(datos[i]);
+			try{
+				if ((i%2) == 0){
+					Tablero.borrar(datos[i]);
+				}
+				if ((i%2) != 0){
+					Tablero.borrar(datos[i], x);
+				}
+			} catch (TheException fe){
+				System.err.println(te.getMessage()+" "+te.getPoss());
 			}
-			if ((i%2) != 0){
-				Tablero.borrar(datos[i], x);
-			}
-				//throw new TheException (System.err.println(te.getMessage()+" "+te.getPoss()));
 			
 		}
 		Tablero.mostrar();
