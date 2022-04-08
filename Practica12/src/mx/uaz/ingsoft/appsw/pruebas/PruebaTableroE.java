@@ -23,7 +23,16 @@ public class PruebaTableroE{
 		//ciclo
 		for (int i = 0; i<Tablero.MAX; i++){
 			datos[i];
-			int rand = (int)(Math.random()*10)+1;
+			int x = (int)(Math.random()*10)+1;
+			try{
+				if ((i%2) == 0){
+					Tablero.insertar(i);
+				}
+				if ((i%2) != 0){
+					Tablero.insertar(i, x);
+				}
+
+			}
 			
 		}
 	}
