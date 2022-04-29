@@ -14,9 +14,9 @@ public class Alumno extends Universitario{
 	
 	public Alumno(String nombre){
 		super(nombre);
-		//Este es con metodo, al igual que el del promedio
 		setCalificacion();
 	}
+
     /* Este codigo verificaba que la calificación esté en entre 0 y 10, pero ya está en la clase tablero
 	public int verificarCalif(int calificacion){
 		if ( (calificacion < 0) && (calificacion > 10)) {

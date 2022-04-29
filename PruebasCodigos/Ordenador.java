@@ -23,6 +23,9 @@ public class Ordenador implements Comparable<Ordenador>{
 	public float getCosto(){
 		return costo;
 	}
+	public String getNombre(){
+		return nombre;
+	}
 
 	
 	public int compareTo(Ordenador o){
