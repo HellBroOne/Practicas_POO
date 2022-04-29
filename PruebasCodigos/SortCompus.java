@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import mx.uaz.ingsoft.appsw.utils.Tablero;
+import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 
 public class SortCompus {
 	public static void main(String[] args) {

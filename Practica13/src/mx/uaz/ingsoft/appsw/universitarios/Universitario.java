@@ -1,6 +1,6 @@
 package mx.uaz.ingsoft.appsw.universitarios;
 
-public class Universitario implements Comparable<Alumno>{
+public class Universitario implements Comparable<Universitario>{
 	private String nombre;
 	private final int id;
 
