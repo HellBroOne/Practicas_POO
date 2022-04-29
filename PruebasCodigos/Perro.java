@@ -1,4 +1,4 @@
-public class Perro extends Animal{
+public class Perro extends Animal implements Comparable <Perro>{
 	//1 error de perro abstracto
 	private boolean moquillo;
 	private int patas;
@@ -19,7 +19,9 @@ public class Perro extends Animal{
 		if ((super.equals(o)) && (o instanceof Perro)){
 			//Aquí se usa el equals del padre, por lo tanto ya no se pregunta el null, ya que esta verificación se hace en el metodo padre
 			Perro p = (Perro) o;
-			if (this.nombre.equals(p.getNombre()) && moquillo == p.moquillo)
+			if (this.name.equals(p.getNombre()) && moquillo == p.moquillo){
+				return 0;
+			}
 		}
 	}
 
@@ -29,6 +31,26 @@ public class Perro extends Animal{
 			this.patas = patas;
 			resultado = true;
 		} return resultado;
+	}
+
+	public int compareTo(Object o){
+		if (o == null){
+			throw new NullPointerException();
+		}
+		if (name.compareTo(p.name) != 0){
+			return name.compareTo(p.name);
+		}
+		if (name.compareTo(p.name) == 0 && moquillo == p.moquillo && patas == p.patas){
+			return 0;
+		}
+		if (name.compareTo(p.name) == 0 && moquillo != p.moquillo && patas == p.patas){
+			return 1;
+		}
+		return patas - p.patas;
+	}
+
+	public String toString(){
+		return name+"\t"+moquillo+"\t"+patas;
 	}
 	
 }
