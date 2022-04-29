@@ -6,7 +6,7 @@ public class Universitario{
 
 	public Universitario(String nombre, int id, int contador){
 		this.nombre = nombre;
-		id = this.contador;
+		id = Tablero.getID();
 	}
 
 	public boolean equals(Object u){
@@ -21,10 +21,14 @@ public class Universitario{
 	}
 
 	public int hashCode(){
-		return nombre.hashCode()*15;
+		return nombre.hashCode()*7;
 	}
 	public String toString(){
 		return nombre;
+	}
+
+	public int getId(){
+		return id;
 	}
 
 }
