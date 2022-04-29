@@ -1,10 +1,12 @@
 package mx.uaz.ingsoft.appsw.universitarios;
 
 public class Universitario{
-	public String nombre;
+	private String nombre;
+	private int id;
 
-	public Universitario(String nombre){
+	public Universitario(String nombre, int id, int contador){
 		this.nombre = nombre;
+		id = this.contador;
 	}
 
 	public boolean equals(Object u){
