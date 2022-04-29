@@ -1,6 +1,6 @@
 package mx.uaz.ingsoft.appsw.universitarios;
 
-public class Universitario{
+public class Universitario implements Comparable<Alumno>{
 	private String nombre;
 	private final int id;
 
@@ -32,7 +32,12 @@ public class Universitario{
 	}
 
 	public int compareTo(Alumno o){
-
+		if (!nombre.equals(o.nombre)){
+			return nombre.compareTo(o.marca);
+		}
+		if (id != o.id){
+			return id - o.id;
+		}
 	}
 
 }

@@ -10,4 +10,7 @@ public class PruebaSort{
 		datos.add(new Alumno("Emiliano"));
 		datos.add(new Alumno("Maria"));
 	}
+	for (Alumno u : datos) {
+		System.out.println(u);
+	}
 }
