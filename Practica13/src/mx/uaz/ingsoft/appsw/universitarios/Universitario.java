@@ -1,10 +1,12 @@
 package mx.uaz.ingsoft.appsw.universitarios;
+import mx.uaz.ingsoft.appsw.utils.Tablero;
+import mx.uaz.ingsoft.appsw.universitarios.alumnos.Alumno;
 
 public class Universitario implements Comparable<Universitario>{
 	private String nombre;
 	private final int id;
 
-	public Universitario(String nombre, int id){
+	public Universitario(String nombre){
 		this.nombre = nombre;
 		id = Tablero.getID();
 	}
@@ -33,7 +35,7 @@ public class Universitario implements Comparable<Universitario>{
 
 	public int compareTo(Alumno o){
 		if (!nombre.equals(o.nombre)){
-			return nombre.compareTo(o.marca);
+			return nombre.compareTo(o.nombre);
 		}
 		if (id != o.id){
 			return id - o.id;

@@ -74,7 +74,7 @@ public class Tablero{
 		}
 	}
 
-	public int getID(){
+	public static int getID(){
 		return contador+1;
 	}
 }
