@@ -1,4 +1,4 @@
-package mx.uaz.ingsoft.utils;
+package mx.uaz.ingsoft.appsw.utils;
 import java.util.Comparator;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 

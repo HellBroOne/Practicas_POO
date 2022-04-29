@@ -2,7 +2,7 @@ package mx.uaz.ingsoft.appsw.universitarios;
 import mx.uaz.ingsoft.appsw.utils.Tablero;
 
 public class Universitario implements Comparable<Universitario>{
-	private String nombre;
+	protected String nombre;
 	private final int id;
 
 	public Universitario(String nombre){

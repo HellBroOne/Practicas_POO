@@ -37,6 +37,9 @@ public class PruebaSort{
 	natural.add(new Alumno("Maria"));
 	
 	for (Universitario e : natural) {
+			for (int i = 0; i<Tablero.MXC ; i++) {
+			((Alumno) e).setCalificacion(Tablero.getCalifRand(), i);
+		}
 	   natural.add(e);
 	   System.out.println(e);
 	}
@@ -52,9 +55,11 @@ public class PruebaSort{
 	porId.add(new Alumno("Emiliano"));
 	porId.add(new Alumno("Maria"));
 
-	Collections.sort(porId, new SortId());
 
 	for (Universitario e : natural) {
+		for (int i = 0; i<Tablero.MXC ; i++) {
+			((Alumno) e).setCalificacion(Tablero.getCalifRand(), i);
+	   }
 	   natural.add(e);
 	   System.out.println(e);
 	}
