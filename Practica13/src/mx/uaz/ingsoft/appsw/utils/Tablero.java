@@ -6,7 +6,7 @@ public class Tablero{
 	public static final int MAX = 5;
 	public static int MXC = 5; //practica 11
 
-	private static final int contador = 0;
+	private static int contador = 0;
 	private static int poss = -1;
 	private static Universitario[] personas = new Universitario[MAX];
 

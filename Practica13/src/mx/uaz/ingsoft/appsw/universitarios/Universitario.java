@@ -2,9 +2,9 @@ package mx.uaz.ingsoft.appsw.universitarios;
 
 public class Universitario{
 	private String nombre;
-	private int id;
+	private final int id;
 
-	public Universitario(String nombre, int id, int contador){
+	public Universitario(String nombre, int id){
 		this.nombre = nombre;
 		id = Tablero.getID();
 	}
@@ -29,6 +29,10 @@ public class Universitario{
 
 	public int getId(){
 		return id;
+	}
+
+	public int compareTo(Alumno o){
+
 	}
 
 }

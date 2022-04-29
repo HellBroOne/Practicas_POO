@@ -19,7 +19,7 @@ public class SortCompus {
 		}
 
 		System.out.println("##### Aplicando orden natural #####");
-		Collections.sort(al, new SortCore());
+		Collections.sort(al);
 		for (Ordenador o : al) {
 			System.out.println(o);
 		}
