@@ -75,6 +75,7 @@ public class Tablero{
 	}
 
 	public static int getID(){
-		return contador+1;
+		int x_contador = contador+1;
+		return x_contador;
 	}
 }

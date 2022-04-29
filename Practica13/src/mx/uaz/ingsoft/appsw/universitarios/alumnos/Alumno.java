@@ -45,7 +45,7 @@ public class Alumno extends Universitario{
 	public String toString(){
 		//Aquí en string va format, ya que ambos son tipos String
 		DecimalFormat decimal = new DecimalFormat("#.#");
-		return "Alumno: "+ nombre +" "+ getCalificaciones()+" "+decimal.format(getPromedio());
+		return "Alumno "+Tablero.getID()+": "+ nombre +" "+ getCalificaciones()+" "+decimal.format(getPromedio());
 	}
 
 	//Metodos practica 11

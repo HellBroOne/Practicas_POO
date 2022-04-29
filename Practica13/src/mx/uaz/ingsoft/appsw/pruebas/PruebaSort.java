@@ -44,8 +44,8 @@ public class PruebaSort{
 	   System.out.println(e);
 	}
 	System.out.println("********");
-
-	TreeSet<Universitario> porId = new TreeSet<Universitario>();
+ 
+	TreeSet<Universitario> porId = new TreeSet<Universitario>(new SortId());
 	porId.add(new Alumno("David"));
 	porId.add(new Alumno("Areli"));
 	porId.add(new Alumno("Emiliano"));

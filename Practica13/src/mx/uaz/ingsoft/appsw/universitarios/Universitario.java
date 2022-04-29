@@ -3,7 +3,7 @@ import mx.uaz.ingsoft.appsw.utils.Tablero;
 
 public class Universitario implements Comparable<Universitario>{
 	protected String nombre;
-	private final int id;
+	protected final int id;
 
 	public Universitario(String nombre){
 		this.nombre = nombre;
