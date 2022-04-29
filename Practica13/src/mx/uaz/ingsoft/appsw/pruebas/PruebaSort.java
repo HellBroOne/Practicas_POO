@@ -1,9 +1,8 @@
 package mx.uaz.ingsoft.appsw.pruebas;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Set;
 import java.util.TreeSet;
-import mx.uaz.ingsoft.appsw.utils.Tablero;
+import mx.uaz.ingsoft.appsw.utils.*;
 import mx.uaz.ingsoft.appsw.universitarios.Universitario;
 import mx.uaz.ingsoft.appsw.universitarios.alumnos.Alumno;
 
@@ -22,7 +21,7 @@ public class PruebaSort{
 	
 	for (Universitario u : datos) {
 		for (int i = 0; i<Tablero.MXC ; i++) {
-			((Alumno) u).setCalificacion(getCalifRand(), i);
+			((Alumno) u).setCalificacion(Tablero.getCalifRand(), i);
 		}
 		System.out.println(u);
 	}
@@ -52,7 +51,8 @@ public class PruebaSort{
 	porId.add(new Alumno("Areli"));
 	porId.add(new Alumno("Emiliano"));
 	porId.add(new Alumno("Maria"));
-	Collections.sort(porId, new SortId() );
+
+	Collections.sort(porId, new SortId());
 
 	for (Universitario e : natural) {
 	   natural.add(e);

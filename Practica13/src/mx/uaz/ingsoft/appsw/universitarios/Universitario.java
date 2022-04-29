@@ -36,9 +36,7 @@ public class Universitario implements Comparable<Universitario>{
 		if (!nombre.equals(o.nombre)){
 			return nombre.compareTo(o.nombre);
 		}
-		if (id != o.id){
-			return id - o.id;
-		}
+		return 0;
 	}
 
 }
