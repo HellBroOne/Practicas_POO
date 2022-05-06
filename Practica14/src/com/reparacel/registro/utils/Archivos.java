@@ -67,12 +67,12 @@ public class Archivos{
 			ObjectOutputStream s_out = new ObjectOutputStream (out);
 			for (Electronico e : datos) {
 				s_out.writeObject(e);
-				s_out.flush();
 			}
-
+			s_out.close();
 		}catch(IOException xd){
 			xd.printStackTrace();
 		}
+
 		return;
 	}
 
