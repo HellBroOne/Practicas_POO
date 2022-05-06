@@ -59,6 +59,8 @@ public class Archivos{
 	public static void guardaDatos(File archivo){
 		//segun lo q entendí se lee la Arraylist de datos
 		//se van a guardar los datos en la arlist
+		//datos.add(archivo);
+		//pero no lo va a añadir, solo guarda electronicos
 	}
 
 }
@@ -76,6 +78,6 @@ despues de la string se hace un while (como en el chat),
 En archivos falta guardar datos recibe el nombre del archivo,
 lee el arraylist y los va a guardar como uno de los datos del arlist
 
-en la prueba vamos a usar properties para usarlo con el home del usuario, si el file existe, si no sepalaverga
-ya no le entendí xD
+en la prueba vamos a usar properties para usarlo con el home del usuario, si el file existe, si no,
+no entendi xd
 */
