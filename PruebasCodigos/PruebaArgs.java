@@ -8,7 +8,7 @@ public class PruebaArgs{
 		props.list(System.out);
 		System.out.println(System.getProperty("os.version"));
 		System.out.println(System.getProperty("user.name"));
-		String rutaarchivo = System.getProperty("user.home") + "/Documents";
+		String rutaarchivo = System.getProperty("user.home") + "\\Documents";
 		System.out.println(rutaarchivo);
 	}
 }
