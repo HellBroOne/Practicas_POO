@@ -1,15 +1,14 @@
 package com.reparacel.registro.equipos;
-import com.reparacel.registro.equipos.Electronico;
 public class Celular extends Electronico{
 	private int numero;
 
-	public Celular(int numero){
+	public Celular(String marca, int modelo, int numero){
 		super(marca, modelo);
 		this.numero = numero;
 	}
 
 	public String toString(){
-		 Electronico.toString()+numero;
+		 return toString()+" "+numero;
 	}
 	//se le añade el numero al metodo padre
 }
