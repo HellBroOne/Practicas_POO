@@ -9,7 +9,7 @@ public class Electronico implements Serializable{
 		this.modelo = modelo;
 	}
 
-	public  String toString(){
+	public String toString(){
 		return marca+" "+modelo;
 	}
 }

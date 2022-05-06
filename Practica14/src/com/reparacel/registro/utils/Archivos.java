@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import com.reparacel.registro.equipos.Celular;
 import com.reparacel.registro.equipos.Computadora;
 
@@ -16,7 +18,7 @@ public class Archivos{
 
 	private Archivos(){}
 
-	public void mostrarDatos(){
+	public static void mostrarDatos(){
 		System.out.println("Contenido de la arraylist: ");
 		for ( Electronico e: datos ) {
 			System.out.println(e);
@@ -35,16 +37,16 @@ public class Archivos{
 				Computadora co = null;
 				Celular ce = null;
 				try{
-					String marca = valores[0];
+					//String marca = valores[0];
 					int modelo = Integer.parseInt(valores[1]);
 					int num = Integer.parseInt(valores[2]);
-					ce = new Celular(marca, modelo, num);
+					ce = new Celular(valores[0], modelo, num);
 					datos.add(ce);
 				} catch (NumberFormatException nex){
-					String marca = valores[0];
+					//String marca = valores[0];
 					int modelo = Integer.parseInt(valores[1]);
-					String micro = valores[2];
-					co = new Computadora(marca, modelo, micro);
+					//String micro = valores[2];
+					co = new Computadora(valores[0], modelo, valores[2]);
 					datos.add(co);
 
 				} 
@@ -56,12 +58,24 @@ public class Archivos{
 		}
 	}
 
-	public static void guardaDatos(File archivo){
-		//segun lo q entendí se lee la Arraylist de datos
-		//se van a guardar los datos en la arlist
-		//datos.add(archivo);
-		//pero no lo va a añadir, solo guarda electronicos
+	public static void guardaDatos(String archivo){
+		if ( (datos.size() == 0) )  {
+			System.out.println("*** ArrayList sin datos. ***");
+		}
+		try {
+			FileOutputStream out = new FileOutputStream (archivo);
+			ObjectOutputStream s_out = new ObjectOutputStream (out);
+			for (Electronico e : datos) {
+				s_out.writeObject(e);
+				s_out.close();
+			}
+
+		}catch(IOException xd){
+			xd.printStackTrace();
+		}
+		return;
 	}
+
 
 }
 /* 

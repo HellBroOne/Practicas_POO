@@ -8,7 +8,7 @@ public class Computadora extends Electronico{
 	}
 
 	public String toString(){
-		return toString()+" "+micro;
+		return super.toString()+" "+micro;
 	}
 	//to string se le agrega micro
 
