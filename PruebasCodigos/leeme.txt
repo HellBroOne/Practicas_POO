@@ -1,0 +1,7 @@
+En este zip se especifican ambos programas de Testeo de Buffers.
+El programa que reemplaza archivos de texto es "TestBufferedStreams.java", 
+los archivos file1.txt y file2.txt son de ejemplo, y están listos para ser copiados 
+(ambos son diferentes).
+Ahora, el programa que reemplaza bytes es "TestByteBufferedStreams.java",
+y al igual que el anterior los archivos img1.png y img2.png están listos para ser
+copiados de uno a otro.

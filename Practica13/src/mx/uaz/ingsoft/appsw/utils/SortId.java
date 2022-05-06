@@ -7,6 +7,13 @@ public class SortId implements Comparator<Universitario>{
 		if ((o1 == null) || (o2 == null)){
 			throw new NullPointerException();
 		} 
-		return o1.getId() - o2.getId();
+		if (o1.getId()==o2.getId()){
+			return 0;
+		}
+		if ( o1.getId() < o2.getId() ){
+			return -1;
+		} else {
+			return 1;
+		}
 	}
 }

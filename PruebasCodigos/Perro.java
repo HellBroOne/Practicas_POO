@@ -3,7 +3,7 @@ public class Perro extends Animal implements Comparable <Perro>{
 	private boolean moquillo;
 	private int patas;
 
-	public Perro(String name){
+	public Perro(String name, boolean moquillo){
 		super(name);
 		this.moquillo = moquillo;
 		this.patas = patas;
@@ -14,15 +14,16 @@ public class Perro extends Animal implements Comparable <Perro>{
 		System.out.println("Ladrar");
 	}
 
-	public boolean equals(Object o){
+	public boolean equals(Perro p){
 		boolean result = false;
-		if ((super.equals(o)) && (o instanceof Perro)){
+		if ((super.equals(p)) && (p instanceof Perro)){
 			//Aquí se usa el equals del padre, por lo tanto ya no se pregunta el null, ya que esta verificación se hace en el metodo padre
-			Perro p = (Perro) o;
-			if (this.name.equals(p.getNombre()) && moquillo == p.moquillo){
-				return 0;
+			Animal o = (Perro) p;
+			if (this.name.equals(o.getName()) && moquillo == p.moquillo){
+				return true;
 			}
 		}
+		return false;
 	}
 
 	public boolean setPatas(int patas){
@@ -33,8 +34,8 @@ public class Perro extends Animal implements Comparable <Perro>{
 		} return resultado;
 	}
 
-	public int compareTo(Object o){
-		if (o == null){
+	public int compareTo(Perro p){
+		if (p == null){
 			throw new NullPointerException();
 		}
 		if (name.compareTo(p.name) != 0){
