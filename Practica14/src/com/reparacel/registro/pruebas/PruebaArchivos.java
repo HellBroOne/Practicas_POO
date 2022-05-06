@@ -2,7 +2,7 @@ package com.reparacel.registro.pruebas;
 import java.util.Scanner;
 import java.util.Properties;
 import java.io.File;
-import com.reparacel.registro.utils.Archivos;
+import static com.reparacel.registro.utils.Archivos.*;
 //importar props y scanner
 public class PruebaArchivos{
 	public static void main(String[] args) {
@@ -14,9 +14,9 @@ public class PruebaArchivos{
 		System.out.println(file);
 		File f = new File(file);
 		if ( f.exists() ){
-			Archivos.leerTexto(f);
-			Archivos.mostrarDatos();
-			Archivos.guardaDatos(ruta + "objetos.ser");
+			leerTexto(f);
+			mostrarDatos();
+			guardaDatos(ruta + "objetos.ser");
 		} else {
 			System.out.println("El archivo no existe.");
 		}

@@ -37,16 +37,16 @@ public class Archivos{
 				Computadora co = null;
 				Celular ce = null;
 				try{
-					//String marca = valores[0];
-					int modelo = Integer.parseInt(valores[1]);
-					int num = Integer.parseInt(valores[2]);
-					ce = new Celular(valores[0], modelo, num);
+					String marca = valores[0];
+					int modelo = Integer.parseInt( valores[1] );
+					int num = Integer.parseInt( valores[2] );
+					ce = new Celular(marca, modelo, num);
 					datos.add(ce);
 				} catch (NumberFormatException nex){
-					//String marca = valores[0];
-					int modelo = Integer.parseInt(valores[1]);
-					//String micro = valores[2];
-					co = new Computadora(valores[0], modelo, valores[2]);
+					String marca = valores[0];
+					int modelo = Integer.parseInt( valores[1] );
+					String micro = valores[2];
+					co = new Computadora(marca, modelo, micro);
 					datos.add(co);
 
 				} 
@@ -67,7 +67,7 @@ public class Archivos{
 			ObjectOutputStream s_out = new ObjectOutputStream (out);
 			for (Electronico e : datos) {
 				s_out.writeObject(e);
-				s_out.close();
+				s_out.flush();
 			}
 
 		}catch(IOException xd){
