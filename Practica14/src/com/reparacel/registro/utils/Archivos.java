@@ -49,9 +49,15 @@ public class Archivos{
 
 				} 
 			}
-		} catch (IOException exc){
-			exc.printStackTrace();
-		} 
+		} catch (IOException iou){
+			iou.printStackTrace();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	public static void guardaDatos(File archivo){
+		
 	}
 
 }
