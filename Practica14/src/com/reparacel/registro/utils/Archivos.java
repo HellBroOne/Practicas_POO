@@ -57,7 +57,8 @@ public class Archivos{
 	}
 
 	public static void guardaDatos(File archivo){
-		
+		//segun lo q entendí se lee la Arraylist de datos
+		//se van a guardar los datos en la arlist
 	}
 
 }
