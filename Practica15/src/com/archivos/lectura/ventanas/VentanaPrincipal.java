@@ -37,7 +37,7 @@ public class VentanaPrincipal extends JFrame{
 	public void initComponents(){
 		mb = new JMenuBar();
 		mnuArchivo = new JMenu("Archivo");
-		mnuProcess = new JMenu("Procesar");
+		mnuProcess = new JMenuItem("Procesar");
 		mb.add(mnuArchivo);
 
 		//escuchador
@@ -53,7 +53,7 @@ public class VentanaPrincipal extends JFrame{
 		mnuArchivo.addSeparator();
 
 		//crear el exit
-		mnuExit = new JMenu("Salir");
+		mnuExit = new JMenuItem("Salir");
 		//otrolistener
 		mnuExit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -66,14 +66,20 @@ public class VentanaPrincipal extends JFrame{
 		//crear y agregar las etiquetas
 		lblFile = new JLabel("Nombre del Archivo: ");
 		this.add(lblFile);
-		txtFile = new JTextField();
-		txtFile.setSize(0, 30);
+
+		//Cuadro de texto
+		txtFile = new JTextField(30);
+		this.add(txtFile);
+		//NOTA DEBEN DE IR AGREGADOS
 		txtContenido = new JTextArea();
 		txtContenido.setSize(20,40);
-
+		this.add(txtContenido);
 		//Lectura de caracteres 
 		lblLeidos = new JLabel("Caracteres leidos: ");
+		this.add(lblLeidos);
 		lblN = new JLabel("0");
+		this.add(lblN);
+		//tamaño de ventana
 		this.setSize(550, 450);
 	}
 
