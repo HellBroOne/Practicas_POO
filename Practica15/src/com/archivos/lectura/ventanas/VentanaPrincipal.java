@@ -59,7 +59,12 @@ public class VentanaPrincipal extends JFrame{
 		txtFile = new JTextField();
 		txtFile.setSize(30);
 		txtContenido = new JTextArea();
-		txtContenido.setSize();
+		txtContenido.setSize(20,40);
+
+		//Lectura de caracteres 
+		lblLeidos = new JLabel("Caracteres leidos: ");
+		lblN = new JLabel("0");
+		this.setSize(550, 450);
 	}
 
 	//Procesar (aún sin crear)
