@@ -9,10 +9,12 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Properties;
+import java.io.File;
 
 public class VentanaPrincipal extends JFrame{
 	private JLabel lblFile;
@@ -88,8 +90,22 @@ public class VentanaPrincipal extends JFrame{
 	//Procesar (aún sin crear)
 	public void procesar(){
 		String ruta = System.getProperty("user.home") + "\\";
-		String archivo = ruta + txtFile;
-		System.out.println(archivo);
+		String archivo = ruta + txtFile.getText();
+		//System.out.println(archivo); no hace falta ya el print, quedó bien
+		File f = archivo;
+
+		if (!f.exists()){
+			JOptionPane.showMessageDialog(this, ("OMG!\nEl archivo no existe papus.");
+			limpiarTextos(true);
+			return;
+		}
+		limpiarTextos(false);
+		if (f.isFile()) {
+			//si es archivo...
+		}
+		if (f.isDirectory()){
+
+		}
 
 	}
 
