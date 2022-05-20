@@ -15,6 +15,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Properties;
 import java.io.File;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class VentanaPrincipal extends JFrame{
 	private JLabel lblFile;
@@ -88,12 +91,12 @@ public class VentanaPrincipal extends JFrame{
 
 	//Procesar (aún sin crear)
 
-	public void procesar()/*
+	public void procesar(){
 		String ruta = System.getProperty("user.home") + "\\";
 		String archivo = ruta + txtFile.getText();
+		File f = getName(archivo);
 		//System.out.println(archivo); no hace falta ya el print, quedó bien
-		File f;
-
+	
 		if (!( f.exists() ) ){
 			JOptionPane.showMessageDialog(this, ("OMG!\nEl archivo no existe papus."));
 			limpiarTextos(true);
@@ -102,14 +105,35 @@ public class VentanaPrincipal extends JFrame{
 		limpiarTextos(false);
 		if (f.isFile()) {
 			//si es archivo...
-			//openFile(f);
+			openFile(f);
 		}
 		if (f.isDirectory()){
-			//openDir(f);
+			openDir(f);
 		}
-		*/
+		
 
 	}
+
+	//Abrir y leer openfile
+	public void openFile(File f){
+		try {
+			BufferedReader in = new BufferedReader(new FileReader(f));
+			String s;
+			s = in.readLine();
+			while ( s != null ) {
+				txtContenido.setText(s);
+				s = in.readLine();
+			}
+			in.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void openDir(File f){
+		//txtContenido.setText(aqui va la variable que se deba abrir )
+	}
+
 
 	public void limpiarTextos(boolean txtF){
 		if (txtF == true){
