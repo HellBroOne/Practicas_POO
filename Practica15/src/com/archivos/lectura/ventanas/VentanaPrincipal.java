@@ -74,8 +74,7 @@ public class VentanaPrincipal extends JFrame{
 		txtFile = new JTextField(30);
 		this.add(txtFile);
 		//NOTA DEBEN DE IR AGREGADOS
-		txtContenido = new JTextArea();
-		txtContenido.setSize(200,400);
+		txtContenido = new JTextArea(20, 40);
 		this.add(txtContenido);
 		
 		//Lectura de caracteres 
@@ -88,24 +87,27 @@ public class VentanaPrincipal extends JFrame{
 	}
 
 	//Procesar (aún sin crear)
-	public void procesar(){
+
+	public void procesar()/*
 		String ruta = System.getProperty("user.home") + "\\";
 		String archivo = ruta + txtFile.getText();
 		//System.out.println(archivo); no hace falta ya el print, quedó bien
-		File f = archivo;
+		File f;
 
-		if (!f.exists()){
-			JOptionPane.showMessageDialog(this, ("OMG!\nEl archivo no existe papus.");
+		if (!( f.exists() ) ){
+			JOptionPane.showMessageDialog(this, ("OMG!\nEl archivo no existe papus."));
 			limpiarTextos(true);
 			return;
 		}
 		limpiarTextos(false);
 		if (f.isFile()) {
 			//si es archivo...
+			//openFile(f);
 		}
 		if (f.isDirectory()){
-
+			//openDir(f);
 		}
+		*/
 
 	}
 
