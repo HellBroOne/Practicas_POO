@@ -132,6 +132,10 @@ public class VentanaPrincipal extends JFrame{
 
 	public void openDir(File f){
 		//txtContenido.setText(aqui va la variable que se deba abrir )
+		String[] dir = f.list();
+			for (String doc : dir) {
+			    txtContenido.setText(doc);	
+			}
 	}
 
 
