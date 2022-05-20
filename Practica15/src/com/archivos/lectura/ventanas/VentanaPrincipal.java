@@ -94,7 +94,7 @@ public class VentanaPrincipal extends JFrame{
 	public void procesar(){
 		String ruta = System.getProperty("user.home") + "\\";
 		String archivo = ruta + txtFile.getText();
-		File f = getName(archivo);
+		File f = new File(archivo);
 		//System.out.println(archivo); no hace falta ya el print, quedó bien
 	
 		if (!( f.exists() ) ){
