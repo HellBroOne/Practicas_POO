@@ -1,3 +1,4 @@
+package com.archivos.lectura.pruebas;
 import com.archivos.lectura.ventanas.VentanaPrincipal;
 
 public class PruebaUI{
