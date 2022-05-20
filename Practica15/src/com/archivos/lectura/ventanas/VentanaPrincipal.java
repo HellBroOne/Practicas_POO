@@ -52,6 +52,14 @@ public class VentanaPrincipal extends JFrame{
 		});
 		mnuArchivo.add(mnuExit);
 		this.setJMenuBar(mb);
+
+		//crear y agregar las etiquetas
+		lblFile = new JLabel("Nombre del Archivo: ");
+		this.add(lblFile);
+		txtFile = new JTextField();
+		txtFile.setSize(30);
+		txtContenido = new JTextArea();
+		txtContenido.setSize();
 	}
 
 	//Procesar (aún sin crear)
