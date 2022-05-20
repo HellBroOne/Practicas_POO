@@ -2,6 +2,16 @@
 package com.archivos.lectura.ventanas;
 //imports
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JButton;
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal extends JFrame{
 	JLabel lblFile;
@@ -20,7 +30,7 @@ public class VentanaPrincipal extends JFrame{
 		this.setLayout(new FlowLayout());
 		this.setTitle("Practica 15");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.initComponents(){};
+		this.initComponents();
 	}
 	//Metodo que inicia los componentes
 
