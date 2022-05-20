@@ -14,19 +14,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal extends JFrame{
-	JLabel lblFile;
-	JTextField txtFile;
-	JButton btnOpen;
-	JTextArea txtContenido;
-	JLabel lblN;
-	JLabel lblLeidos;
-	JMenuBar mb;
-	JMenu mnuArchivo;
-	JMenuItem mnuProcess;
-	JMenuItem mnuExit;
+	private JLabel lblFile;
+	private JTextField txtFile;
+	private JButton btnOpen;
+	private JTextArea txtContenido;
+	private JLabel lblN;
+	private JLabel lblLeidos;
+	private JMenuBar mb;
+	private JMenu mnuArchivo;
+	private JMenuItem mnuProcess;
+	private JMenuItem mnuExit;
 
 	//Se aniade el constructor
-	public VentanaPrincipal{
+	public VentanaPrincipal(){
 		this.setLayout(new FlowLayout());
 		this.setTitle("Practica 15");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +43,7 @@ public class VentanaPrincipal extends JFrame{
 		//escuchador
 		mnuProcess.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				procesar(e);
+				procesar();
 			}
 
 		});
@@ -57,7 +57,7 @@ public class VentanaPrincipal extends JFrame{
 		//otrolistener
 		mnuExit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				dispose(e);
+				dispose();
 			}
 		});
 		mnuArchivo.add(mnuExit);
@@ -67,7 +67,7 @@ public class VentanaPrincipal extends JFrame{
 		lblFile = new JLabel("Nombre del Archivo: ");
 		this.add(lblFile);
 		txtFile = new JTextField();
-		txtFile.setSize(30);
+		txtFile.setSize(0, 30);
 		txtContenido = new JTextArea();
 		txtContenido.setSize(20,40);
 
@@ -78,7 +78,7 @@ public class VentanaPrincipal extends JFrame{
 	}
 
 	//Procesar (aún sin crear)
-	public void procesar(ActionEvent e){
+	public void procesar(){
 
 	}
 }
