@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Arrays;
 
 public class VentanaPrincipal extends JFrame{
 	private JLabel lblFile;
@@ -132,10 +133,15 @@ public class VentanaPrincipal extends JFrame{
 
 	public void openDir(File f){
 		//txtContenido.setText(aqui va la variable que se deba abrir )
-		String[] dir = f.list();
-			for (String doc : dir) {
-			    txtContenido.setText(doc);	
-			}
+		String [] dir = f.list();
+		Arrays.sort(dir);
+		int i;
+		String dir_res = "";
+		for (i = 0; i < dir.length ; i++) {
+			dir_res = dir_res + dir[i] + "\n";
+		}
+		System.out.println(dir_res);
+		txtContenido.setText(dir_res);
 	}
 
 
