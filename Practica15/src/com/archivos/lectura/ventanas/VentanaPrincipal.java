@@ -28,9 +28,10 @@ public class VentanaPrincipal extends JFrame{
 		mb = new JMenuBar();
 		mnuArchivo = new JMenu("Archivo");
 		mnuProcess = new JMenu("Procesar");
+		mb.add(mnuArchivo);
 
 		//escuchador
-		mnu.addActionListener(new ActionListener(){
+		mnuProcess.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				procesar(e);
 			}
@@ -38,8 +39,19 @@ public class VentanaPrincipal extends JFrame{
 		});
 
 		//agregarlos a los menus
-		mnuArchivo.add(mnu);
+		mnuArchivo.add(mnuProcess);
 		mnuArchivo.addSeparator();
+
+		//crear el exit
+		mnuExit = new JMenu("Salir");
+		//otrolistener
+		mnuExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				dispose(e);
+			}
+		});
+		mnuArchivo.add(mnuExit);
+		this.setJMenuBar(mb);
 	}
 
 	//Procesar (aún sin crear)
