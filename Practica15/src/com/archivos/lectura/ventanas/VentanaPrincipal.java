@@ -26,6 +26,24 @@ public class VentanaPrincipal extends JFrame{
 
 	public void initComponents(){
 		mb = new JMenuBar();
-		mnuArchivo = new JMenu();
+		mnuArchivo = new JMenu("Archivo");
+		mnuProcess = new JMenu("Procesar");
+
+		//escuchador
+		mnu.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				procesar(e);
+			}
+
+		});
+
+		//agregarlos a los menus
+		mnuArchivo.add(mnu);
+		mnuArchivo.addSeparator();
+	}
+
+	//Procesar (aún sin crear)
+	public void procesar(ActionEvent e){
+
 	}
 }
