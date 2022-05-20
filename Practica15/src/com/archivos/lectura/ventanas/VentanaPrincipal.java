@@ -74,6 +74,7 @@ public class VentanaPrincipal extends JFrame{
 		txtContenido = new JTextArea();
 		txtContenido.setSize(20,40);
 		this.add(txtContenido);
+		
 		//Lectura de caracteres 
 		lblLeidos = new JLabel("Caracteres leidos: ");
 		this.add(lblLeidos);
