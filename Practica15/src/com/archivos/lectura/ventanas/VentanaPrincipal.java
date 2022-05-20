@@ -72,7 +72,7 @@ public class VentanaPrincipal extends JFrame{
 		this.add(txtFile);
 		//NOTA DEBEN DE IR AGREGADOS
 		txtContenido = new JTextArea();
-		txtContenido.setSize(20,40);
+		txtContenido.setSize(200,400);
 		this.add(txtContenido);
 		
 		//Lectura de caracteres 
@@ -87,5 +87,11 @@ public class VentanaPrincipal extends JFrame{
 	//Procesar (aún sin crear)
 	public void procesar(){
 
+	}
+
+	public boolean limpiarTextos(boolean txtF){
+		if (txtF == true){
+			txtFile.setText("");
+		}
 	}
 }
