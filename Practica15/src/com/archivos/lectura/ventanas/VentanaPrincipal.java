@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Properties;
 
 public class VentanaPrincipal extends JFrame{
 	private JLabel lblFile;
@@ -86,12 +87,17 @@ public class VentanaPrincipal extends JFrame{
 
 	//Procesar (aún sin crear)
 	public void procesar(){
+		String ruta = System.getProperty("user.home") + "\\";
+		String archivo = ruta + txtFile;
+		System.out.println(archivo);
 
 	}
 
-	public boolean limpiarTextos(boolean txtF){
+	public void limpiarTextos(boolean txtF){
 		if (txtF == true){
 			txtFile.setText("");
-		}
+			txtContenido.setText("");
+			lblN.setText("0");
+		} 
 	}
 }
