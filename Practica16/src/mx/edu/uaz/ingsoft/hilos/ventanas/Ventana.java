@@ -1,7 +1,6 @@
 //package
 package mx.edu.uaz.ingsoft.hilos.ventanas; 
 //imports
-import mx.edu.uaz.ingsoft.hilos.ventanas.Acciones; 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
