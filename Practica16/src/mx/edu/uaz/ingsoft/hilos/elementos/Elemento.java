@@ -2,7 +2,7 @@ package mx.edu.uaz.ingsoft.hilos.elementos;
 //imports si se rerquieren
 import javax.swing.JLabel;
 
-public class Elemento extends Thread implements Runnable{
+public class Elemento extends Thread {
 	private char c;
 	private JLabel etiqueta;
 
