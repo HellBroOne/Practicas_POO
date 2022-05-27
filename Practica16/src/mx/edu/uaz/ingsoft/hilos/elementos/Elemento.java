@@ -2,7 +2,7 @@ package mx.edu.uaz.ingsoft.hilos.elementos;
 //imports si se rerquieren
 import javax.swing.JLabel;
 
-public class Elemento extends Thread{
+public class Elemento extends Thread implements Runnable{
 	private char c;
 	private JLabel etiqueta;
 
@@ -11,13 +11,18 @@ public class Elemento extends Thread{
 		this.etiqueta = etiqueta;
 	}
 
-	class HelloRunner implements Runnable {
 	public void run() {
+		System.out.println("Run hecho");
 		String out = etiqueta.getText();
 		for (int i = 0; i<31; i++) {
 			out = out+c;
-			this.sleep(500);
+			try{
+				Thread.sleep(500);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+			
 		}
-		etiqueta = out+" Finalizado";
+		out = out+" Finalizado";
 	}
 }

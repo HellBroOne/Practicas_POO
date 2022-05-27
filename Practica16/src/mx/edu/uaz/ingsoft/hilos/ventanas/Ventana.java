@@ -28,9 +28,9 @@ public class Ventana extends JFrame{
 
 		//Para el menú (CREAR)
 		mb = new JMenuBar();
+		this.setJMenuBar(mb);
 		mnuArchivo = new JMenu("Archivo");
 		miStart = new JMenuItem("Iniciar");
-		miExit = new JMenuItem("Salir");
 		//agregar a mnuAchivo
 		mb.add(mnuArchivo);
 
@@ -41,6 +41,7 @@ public class Ventana extends JFrame{
 			}
 		});
 
+		miExit = new JMenuItem("Salir");
 		miExit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				dispose();
