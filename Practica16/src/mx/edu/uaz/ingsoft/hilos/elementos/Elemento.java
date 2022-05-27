@@ -11,12 +11,17 @@ public class Elemento extends Thread{
 		this.etiqueta = etiqueta;
 	}
 
+	public getEtiqueta(){
+		return etiqueta;
+	}
+
 	class HelloRunner implements Runnable {
 	int i;
 	public void run() {
 		String out = etiqueta.getText();
 		for (int i = 0; i<31; i++) {
 			etiqueta = ""+c;
+			this.sleep(500);
 		}
 		out = out+"Finalizado";
 	}
