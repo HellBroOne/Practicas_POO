@@ -7,20 +7,23 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
 
 public class Ventana extends JFrame{
 	private Acciones acc;
-	private Jlabel etq1;
-	private Jlabel etq2;
+	private JLabel etq1;
+	private JLabel etq2;
 	private JMenuBar mb;
 	private JMenu mnuArchivo;
 	private JMenuItem miStart;
 	private JMenuItem miExit;
 
 	public Ventana(){
-		Acciones acc = new Acciones(this);
-		Jlabel etq1 = new JLabel("Elemento 1: ");
-		JLabel etq2 = new JLabel("Elemento 2: ");
+		acc = new Acciones(this);
+		etq1 = new JLabel("Elemento 1: ");
+		etq2 = new JLabel("Elemento 2: ");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		//Para el menú (CREAR)
