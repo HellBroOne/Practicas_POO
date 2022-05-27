@@ -16,13 +16,14 @@ public class Elemento extends Thread implements Runnable{
 		String out = etiqueta.getText();
 		for (int i = 0; i<31; i++) {
 			out = out+c;
+			etiqueta.setText(out);
 			try{
 				Thread.sleep(500);
 			} catch (InterruptedException e){
 				e.printStackTrace();
 			}
-			
 		}
 		out = out+" Finalizado";
+		etiqueta.setText(out);
 	}
 }
