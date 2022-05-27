@@ -31,8 +31,37 @@ public class Ventana extends JFrame{
 		//agregar a mnuAchivo
 		mb.add(mnuArchivo);
 
+		//Se hacen los listeners anonimos
+		miStart.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				acc.iniciar();
+			}
+		});
+
+		miExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				dispose();
+			}
+		});
+
 		//Se agrega a mnuArchivo los item
 		mnuArchivo.add(miStart);
 		mnuArchivo.add(miExit);
 	}
+
+	public JLabel getEtiqueta1(){
+		return etq1;
+	}
+
+	public JLabel getEtiqueta2(){
+		return etq2;
+	}
+
+	public void mostrarVentana(){
+		this.add(etq1, BorderLayout.NORTH);
+		this.add(etq2, BorderLayout.SOUTH);
+		this.setSize(800, 200);
+		this.setVisible(true);
+	}
+
 }
