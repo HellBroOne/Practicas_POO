@@ -117,6 +117,7 @@ public class VentanaPrincipal extends JFrame{
 
 	//Abrir y leer openfile
 	public void openFile(File f){
+		int lblN_counter = 0;
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(f));
 			String s;
@@ -124,7 +125,15 @@ public class VentanaPrincipal extends JFrame{
 			while ( s != null ) {
 				txtContenido.setText(s);
 				s = in.readLine();
+				if (s != null){
+					for (int i = 0; i<s.length(); i++) {
+					if (!Character.isSpaceChar(s.charAt(i))){
+						lblN_counter = lblN_counter +1;
+					}
+				}
+			   }			
 			}
+			lblN.setText(Integer.toString(lblN_counter));
 			in.close();
 		} catch (IOException e) {
 			e.printStackTrace();
