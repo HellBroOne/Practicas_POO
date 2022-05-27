@@ -1,17 +1,18 @@
+package mx.edu.uaz.ingsoft.hilos.ventanas; 
 //import
-import javax.swing.JFrame;
 
 public class Acciones{
-	private JFrame v;
+	private Ventana v;
 
-	public Acciones(JFrame v){
-		v.setLayout(new FlowLayout());
-		v.setTitle("Practica 16");
-		v.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public Acciones(Ventana v){
+		this.v = v;
 	}
 
 	public void iniciar(){
-		Elemento e1 = new Elemento("G", v.getEtiqueta());
-		Elemento e2 = new Elemento("R", v.getEtiqueta());
+		Elemento e1 = new Elemento("G", v.getEtiqueta1());
+		Elemento e2 = new Elemento("R", v.getEtiqueta2());
+		e1.start();
+		e2.start();
 	}
+
 }

@@ -1,6 +1,6 @@
 package mx.edu.uaz.ingsoft.hilos.elementos;
 //imports si se rerquieren
-import javax.swing.Jlabel;
+import javax.swing.JLabel;
 
 public class Elemento extends Thread{
 	private char c;
@@ -11,7 +11,7 @@ public class Elemento extends Thread{
 		this.etiqueta = etiqueta;
 	}
 
-	public getEtiqueta(){
+	public void getEtiqueta(){
 		return etiqueta;
 	}
 
@@ -20,9 +20,9 @@ public class Elemento extends Thread{
 	public void run() {
 		String out = etiqueta.getText();
 		for (int i = 0; i<31; i++) {
-			etiqueta = ""+c;
+			etiqueta = etiqueta+c;
 			this.sleep(500);
 		}
-		out = out+"Finalizado";
+		out = etiqueta+" Finalizado";
 	}
 }
