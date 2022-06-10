@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.FlowLayout;
 
+//esto es un comentario
 public class LayoutExample {
 	private JFrame f;
 	private JButton b1;
